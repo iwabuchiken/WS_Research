@@ -1,0 +1,4 @@
+f(x):=x^3+x+1;
+roots:solve(f(x) = 0,x);
+print("The roots of x^3 + x + 1 are ",float(roots));
+stringout("file_1.mac",input);

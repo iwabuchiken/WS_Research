@@ -1,0 +1,177 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+float(log(2));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f: 2*log(2)*j;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+diff(f,j);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+diff(2*log(2));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+sum(log(x),x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+debugmode(true);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+sum(log(x),x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+sum(1/x^2, x, 1, inf);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+sum(1/x^2, x, 1, inf), simpsum=true;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+sum(j*log(j),j,1,10);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f2: sum(j*log(j),j,1,10);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f3: sum(j*log(j),j,1,x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+diff(f3,x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+//http://maxima.sourceforge.net/docs/tutorial/en/gaertner-tutorial-revision/Pages/sum01.htm;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+subst(2,x,f3);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+ev(f3, x = 2);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+#http://maxima.sourceforge.net/docs/tutorial/en/gaertner-tutorial-revision/Pages/DiffEq0001.htm;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+simplify_sum(f3);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f3;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+sum(f3,x,1,3);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(f2);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+solve(x^2 = 3,x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f3;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+solve(f3 = 10,x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+solve(x+log(x) = 10,x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+diff(f3,x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+diff(x+log(x),x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+diff(diff(x+log(x),x),x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f4: x*y;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f4;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+diff(f4,x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+coeff(f3);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+diff(log(x),x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+solve((%e^x)*x = 10, x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+format(log(10));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(log(10));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%e;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%e);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+2.718281828459045 ^ 2.302585092994046;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+diff(-1*%e^x,x);
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

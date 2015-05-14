@@ -1,0 +1,165 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+v1: matrix([1,2]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+v2: matrix([3,4]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+v1.v2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+v3: v1*v2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+v1.v3;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+v1*v3;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+v3.v1;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+w1: matrix([1],[2],[3]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+w2: transpose(v2);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+w2[3,1]=5;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+w2: matrix([4],[5],[6]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+w3: w1*w2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+w1.w3;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+w3[1];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+w1[2]*w2[3] - w1[3]*w2[2];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+w1[2].w2[3] - w1[3].w2[2];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+load("vect")$
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+[1,2,3]~[4,5,6];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+x: express(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+x[1];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+v1;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+v2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+v3;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+v4: v1~v2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+express(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a1: [1,2,3];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a2: [4,5,6];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a3: a1~a2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+express(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a1.a3;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+express(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a3: express(a3);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a3;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a1.a3;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a3.a1;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a2.a3;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a1;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a1.a2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a1*%;
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

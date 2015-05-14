@@ -1,0 +1,109 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+f: sin(x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+subst(0,x,f);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+diff(f,x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f1: diff(f,x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f1;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+subst(0,x,f1);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+load("C:/WORKS/WS/Eclipse_Luna/Learn_Maxima/D-4/taylor.mac");
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+n: 1; val: 1.25; taylor_sum(f,x,n, val);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+factorial(0);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+load("C:/WORKS/WS/Eclipse_Luna/Learn_Maxima/D-4/taylor.mac");
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+n: 1; val: 1.25; taylor_sum(f,x,n, val);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+load("C:/WORKS/WS/Eclipse_Luna/Learn_Maxima/D-4/taylor.mac");
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+n: 1; val: 1.25; taylor_sum(f,x,n, val);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+load("C:/WORKS/WS/Eclipse_Luna/Learn_Maxima/D-4/taylor.mac");
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+n: 1; val: 1.25; taylor_sum(f,x,n, val);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+sum(2,6);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+load("C:/WORKS/WS/Eclipse_Luna/Learn_Maxima/D-4/taylor.mac");
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+n: 1; val: 1.25; taylor_sum(f,x,n, val);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+b;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+c;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+b,c: 2,3;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+[b,c]: [2,3];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+b;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+c;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+b;c;
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

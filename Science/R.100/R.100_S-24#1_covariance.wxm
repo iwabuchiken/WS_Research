@@ -1,0 +1,230 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+c: 3*10^8;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+b: V/c;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+g: 1/sqrt(1-b^2);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+E: 10;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+B: 10;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+E2: g*(E+c*b*B);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(E2,[V,0.01*c,0.99*c]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(b,[V,0.01*c,0.999*c]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(E+c*b*B,[V,0.01*c,0.999*c]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([g, E+c*b*B],[V,0.01*c,0.99*c]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(g,[V,0.01*c,0.999*c], [title, "gamma"]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(c*b,[V,0.01*c,0.999*c]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d ( x^2 - 1, [x, -3, 3], [box, false], grid2d,
+      [yx_ratio, 1], [axes, solid], [xtics, -2, 4, 2],
+      [ytics, 2, 2, 6], [label, ["x", 2.9, -0.3],
+      ["x^2-1", 0.1, 8]], [title, "A parabola"])$
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(g,[V,0.01*c,0.999*c],[label, ["x", 2.9, -0.3],["x^2-1", 0.1, 8]]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(g,[V,0.01*c,0.999*c],[gnuplot_preamble,"set title Å'Two Functions';"]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(g,[V,0.01*c,0.999*c],[gnuplot_preamble,"set title \"Two Functions\";"]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(g,[V,0.01*c,0.999*c],[gnuplot_preamble,"set title \"Gamma\";"]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([g,g*c*b],[V,0.99*c,0.999*c],[gnuplot_preamble,"set title \"g, gcb\";"]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+g*c*b;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([g,g*c*b],[V,0.01*c,0.02*c],[gnuplot_preamble,"set title \"g, gcb\";"]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([g,g*c*b],[V,0.01*c,0.02*c],[y,3*10^6,4*10^6],[gnuplot_preamble,"set title \"g, gcb\";"]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([g,g*c*b],[V,0.01*c,0.011*c],[gnuplot_preamble,"set title \"g, gcb\";"]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+subst(0.01*c,V,g);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+subst(0.01*c,V,g*c*b);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([g*c*b],[V,0.01*c,0.011*c],[gnuplot_preamble,"set title \"gcb\";"]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([g],[V,0.01*c,0.011*c],[gnuplot_preamble,"set title \"g\";"]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([g*c*b],[V,0.01*c,0.99*c],[gnuplot_preamble,"set title \"gcb\";"]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([g],[V,0.01*c,0.99*c],[gnuplot_preamble,"set title \"g\";"]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+subst(0.99*c,V,g);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+subst(0.9*c,V,g*c*b);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+log(3);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+log(6.194*10^8);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([g],[V,(1-10^-20)*c,(1-10^-21)*c],[gnuplot_preamble,"set title \"g\";"]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f: 2*x;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+integrate(f,x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+integrate(f,x, 1,2);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+g;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+integrate(g,V);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(%,[V,c*(-0.01),c*0.99]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: page break    ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(asin(x),[x,-%pi,%pi]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(integrate(g,V),[V,c*0.01,c*0.99]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(integrate(g,V),[V,0,10]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+subst(0,V,g);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(integrate(g,V),[V,c*0.01,c*1]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+subst(c,V,g);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+asin(1);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+g_: integrate(g,V,0,c);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+g_: integrate(g,V,0,10);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+integrate(asin(x),x,0,1);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+g_: integrate(g,V);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+subst(0.5*c,V,g_);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+subst(0.1*c,V,g_);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%o110 / %o111;
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

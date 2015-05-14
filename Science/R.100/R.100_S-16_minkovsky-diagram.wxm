@@ -1,0 +1,113 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+c: 3*10^8;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+V: c*0.1;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+V: null;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+V;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+kill(V);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+V;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d((1-V/c)/sqrt(1-(V/c)^2), [V,0.001*c,0.999*c]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f: (1-V/c)/sqrt(1-(V/c)^2);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(f, [V,0.001*c,0.999*c]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+diff(f,V);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(diff(f,V), [V,0.001*c,0.999*c]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+diff(diff(f,V),V);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(diff(diff(f,V),V), [V,0.001*c,0.97*c]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+450*0.999;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+3/4.5;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+1*99%;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+6.67*99.9/100;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+3/6.66;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+254*9.460730/3;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+60*60*24*365;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+801.0084733333333*10^14/(31536*10^3);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+c;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f1;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f1: sqrt(1-(V/c)^2);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(f1, [V,0.001*c,0.999*c]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(diff(diff(f1,V),V), [V,0.001*c,0.8*c]);
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

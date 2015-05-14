@@ -1,0 +1,260 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+a: 3*10^8*0.99*2.2*10^(-6);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+b: 1/sqrt(1-0.995^2);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a2: 22*3*0.995*10^2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+tau: 2.2*10^(-6);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+N0: 100;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+N: N0*%e^(-t/tau);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+subst(tau,t,N);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+coeff: %e^(-t/tau);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+subst(tau,t,coeff);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+contour_plot (x^2 + y^2, [x, -4, 4], [y, -4, 4])$
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+contour_plot (u^3 + v^2, [u, -4, 4], [v, -4, 4],
+              [legend,false],
+              [gnuplot_preamble, "set cntrparam levels 10"])$
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+load(implicit_plot)$
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+implicit_plot (x^2 = y^3 - 3*y + 1, [x, -4, 4], [y, -4, 4])$
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+julia (-0.55, 0.6, [iterations, 36], [x, -0.3, 0.2],
+      [y, 0.3, 0.9], [grid, 400, 400], [color_bar_tics, 0, 6, 36])$
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot3d (u^2 - v^2, [u, -2, 2], [v, -3, 3], [grid, 100, 100],
+        [mesh_lines_color,false])$
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot3d ( log ( x^2*y^2 ), [x, -2, 2], [y, -2, 2], [z, -8, 2],
+         [palette, false], [color, blue])$
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot3d (log (x^2*y^2), [x, -2, 2], [y, -2, 2],[grid, 29, 29],
+       [palette, [gradient, red, orange, yellow, green]],
+       color_bar, [xtics, 1], [ytics, 1], [ztics, 4],
+       [color_bar_tics, 4])$
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: page break    ] */
+
+/* [wxMaxima: input   start ] */
+debugmode(true);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot3d (log (x^2*y^2), [x, -2, 2], [y, -2, 2],[grid, 29, 29],
+       [palette, [gradient, red, orange, yellow, green]],
+       color_bar, [xtics, 1], [ytics, 1], [ztics, 4],
+       [color_bar_tics, 4])$
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+c: 30*10^8;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+r: 0.2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+V: c*r;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+b: V/c;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+g: sqrt(1-b^2);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d (sqrt(1-(m/c)^2), [m,0.01*c,0.99*c])$
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(sin(x),[x,0,2*%pi]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f: 1-a^2-b^2+a^2b^2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f: 1-a1^2-b1^2+a1^2*b1^2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+factor(f);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f2: (1+a1*b1)^2-(a1+b1)^2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+expand(f2);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+V;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+v;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+L1: v/sqrt(1-v^2/c^2);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+L2: v*2/(1+v^2/c^2);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(L1, [v,0.2*c,0.9*c])$
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(L2, [v,0.2*c,0.9*c], v,[v,0.2*c,0.9*c])$
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([cos(x),sin(x),tan(x),cot(x)],[x,-2*%pi,2*%pi],[y,-2,2],
+[gnuplot_preamble,"set xzeroaxis; set xtics ('-2pi' -6.283, '-3pi/2' -4.712,
+'-pi' -3.1415, '-pi/2' -1.5708,  '0' 0,'pi/2' 1.5708, 'pi' 3.1415,'3pi/2' 4.712,
+'2pi' 6.283)"]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([L2, 2*v], [v,0.2*c,0.9*c], [x,0,c],[y,0,c],[gnuplot_preamble,"set xzeroaxis; set xtics ('c/2' 3/2*10**8, 'c' 3*10**8)"]);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+plot3d(atan(-x^2+y^3/4),[x,-4,4],[y,-4,4],[grid,50,50],[gnuplot_pm3d,true]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot3d(atan(-x^2+y^3/4),[x,-4,4],[y,-4,4],[grid,50,50],[gnuplot_pm3d,true],
+[gnuplot_preamble,"set pm3d at s;unset surface;set contour;set cntrparam levels
+20;unset key"]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+lamda: 5.5*10^(-6);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+k: 2*%pi/lamda;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+c;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+w: k*c;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f1;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f_doppler: sin(w*t - k*x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot3d(f_doppler,[x,0,4],[t,0,4],[grid,50,50],[gnuplot_pm3d,true]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+w;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+k;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(sin(w*1 - k*x),[x,0,4],[grid,50,50],[gnuplot_pm3d,true]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+lamda;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+w: 0.1;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+lamda: 0.5;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+k: 2*%pi/lamda;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f1;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f1: sin(w*t - k*x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot3d(f1,[t,0,5], [x,0,5],[grid,100,10],[gnuplot_pm3d,true]);
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

@@ -1,0 +1,177 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([sinh(x),cosh(x),sinh(x)-cosh(x)], [x,-%pi*2,%pi*2]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(-exp(-x), [x,-%pi,%pi]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+exp(-%i*1.2);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+exp(-%i*%pi*(1/10));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+exp(%i*%pi*3);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+b1: exp(%i*t);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+subst(1,t,b1);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+subst(%pi*2.1,t,b1);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+b2: exp(-%i*t);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+b3: (b1+b2)/2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+b4: (b1-b2)/(2*%i);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+subst(%pi/3,t,b4);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+exp(%i*1.2);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+exp(-%i*1.2);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%o24+%o25;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+cos(%i*1);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%i*1;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%i*1.2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+cos(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+cos(%i*2+4);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+cosh(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%o31+%o33;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%o32+%o33;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%e^(%i*2);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%e^(-%i*2);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%o38;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%o38*%o40;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f: %e^(%i);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f^%i;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+(%e^%i)^%i;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%e;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([%e,%e^(-1)], [x,-1,1]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([exp(x), exp(-x), exp(x)+exp(-x)], [x,-4,4]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+sin(%i*2);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%*%i;
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

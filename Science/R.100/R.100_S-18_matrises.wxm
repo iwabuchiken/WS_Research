@@ -1,0 +1,229 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+f: matrix[1,2];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+kill(f);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f: [1,2];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f[2];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f*f;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f1: [[1,2],[3,4]];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f1*f1;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f2: [[a,b],[c,d]];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f2*f2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a: matrix([[1,2],[3,4]]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a(2,1);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+kill(a);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a:matrix([1,2],[3,4]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a*a;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+b: matrix([c,d],[e,f]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+kill(f);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+b*b;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+m1: matrix([1,0],[0,1]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+m1*m1;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+b;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+b.m1;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+b.b;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+m1.m1;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+m2: matrix([1,1],[-1,1]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+m2.m2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+m1;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+m1.m2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+m1.m2.m2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+m3: matrix([cos(x),sin(x)],[sin(x),cos(x)]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+m2.m3;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+m2*m3;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+m2.m2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%.m3;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+m3.m2.m2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+m3;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+determinant(%o39);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+m4;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+m4: matrix([0,1],[1,0]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+m3.m4;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+B = ones(2,2);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+ones(2,2);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+eye(2,2);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+B: ones(1,4);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+B;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+m3;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+row(m3,1);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+col(m3,1);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+rank(m3);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+transpose(m3);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+m5;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+m5: matrix([g,-gb,0,0],[-gb,g,0,0],[0,0,1,0],[0,0,0,1]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+m6: matrix([ct],[x],[y],[z]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+m5.m6;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+m6.m5;
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

@@ -1,0 +1,3 @@
+C:/WORKS/WS/Eclipse_Luna/Learn_Maxima/D-1/allOps.mc
+
+C:/WORKS/WS/Eclipse_Luna/Learn_Maxima/D-1/scripts.max

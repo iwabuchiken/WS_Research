@@ -1,0 +1,145 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+a: 6*(1+2*t^2)*(t^3-t)^2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a: a/(sqrt(t+5*t^2)*(4*t)^(3/2));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+b: sqrt(1+2*t);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+b: b/(t*sqrt(1+t^2));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+c: a+b;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+diff(c);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+diff((1+2*t)^3);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+diff(c,t);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+diff(1+6*t,t);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+diff(4*t^2+2*t^3,t);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+diff((1+2*t)^3,t);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+diff(sqrt(1+5*t),t);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+integrate(4*t^2+2*t^3,t);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a1: (1+2*t)^3;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+integrate(a1,t);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a1_: (1+2*t)^4/8;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+expand(a1_);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+diff(%o20,t)
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+factor(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+diff(%o18,t);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+factor(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a1_;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a2: t+7*t^2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+integrate(a2^(1/3),t);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a: 1.0;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+rho(omega,phi,theta):=1;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+rho(omega,phi,theta):= a*(-tan(theta) * cos(omega+phi) + 1/cos(theta))/(1+tan(theta)*tan(theta)*sin(omega+phi)*sin(omega+phi));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+theta: 0.1*%pi;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+g: '[rho(u,phi,theta)*cos(phi),rho(u,phi,theta)*sin(phi),-rho(u,phi,theta)*tan(theta)*sin(u+phi)];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+set_plot_option([gnuplot_preample,"unset pm3d; set hidden3d;"])$
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot3d(g, [u,0,2*%pi],[phi,0,2*%pi])$
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: hide output   ] */
+
+/* [wxMaxima: input   start ] */
+plot3d(g, [u,0,2*%pi],[phi,0,1.25*%pi])$
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+(%o35)
+/* [wxMaxima: input   end   ] */
+
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

@@ -1,0 +1,89 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+c: 3*10^8;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+s: sqrt(v^2-c^2);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(s, [v,c*0.01,c*0.9999]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+s: sqrt(c^2-v^2);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+sqrt(3);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+1.73/2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+365*(0.865);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+c;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f: sqrt(c^2-v^2)/c;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(f,[v,0*c,c*10^-4]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+v: c*10^-4;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f1: sqrt(c^2*t^2-v^2*t^2)/c;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(f1,[t,1,10]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+24*3600*365;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+31536*10^4*sqrt(3);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%/10;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%/365;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+20-10*sqrt(3);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%);
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

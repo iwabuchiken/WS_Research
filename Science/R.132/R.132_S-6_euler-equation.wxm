@@ -1,0 +1,77 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+%i^4;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%*%i;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%*%i;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%*%i;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%*%i;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%*%i;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%*%i;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%*%i;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%e^(%i*2));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+x: 1.2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%i*sin(x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+cos(x)+%i*sin(x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+x: %i*2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f: %e^(%i*x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(f);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+x: %i*5+2; f: %e^(%i*x); float(f);
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

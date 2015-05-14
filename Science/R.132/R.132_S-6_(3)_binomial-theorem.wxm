@@ -1,0 +1,181 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+n: 10;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+factorial(n);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f: factorial(n)/(factorial(n-k)*factorial(k));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+n: 5;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(f,[k,1,8]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+n: 10; f10: factorial(n)/(factorial(n-k)*factorial(k));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+n: 9; f9: factorial(n)/(factorial(n-k)*factorial(k));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+n: 8; f8: factorial(n)/(factorial(n-k)*factorial(k));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([f10,f9,f8],[k,0,10],[x,0,10]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f10_: diff(f10,k);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+subst(3,k,f10_);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%e^(%i*%pi);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%e^(%i*3));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%e^(%i*3.14));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+imagpart(%e^(%i*3.14));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+g;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+g: imagpart(%e^(%i*x));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([sin(x),cos(x)],[x,%pi*(-3),%pi*3]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot3d(atan(-x^2+y^3/4),[x,-4,4],[y,-4,4],[grid,50,50]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot3d(sin(x)+cos(x),[x,-4,4],[y,-4,4],[grid,50,50]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([sin(x),cos(x),sin(x)+cos(x),sin(x)*cos(x),sin(x)/cos(x)],[x,-4*%pi,4*%pi],[grid,50,50]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([sin(x)/cos(x)],[x,-1*%pi,1*%pi],[grid,50,50]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([sin(x)/cos(x)],[x,-1.571,-1.5705],[grid,50,50]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(%e^x,[x,-1,1]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+g;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+g: %e^x;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+solve(g=0,x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+solve(g=-1,x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+g1: x^3+6*x^2+4*x-3;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+g2: diff(g1,x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+g3: diff(g2,x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+g4: g3+g2+g1;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+m: solve(g4=0,x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+m[1];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+rhs_1: rhs(m[1]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+subst(rhs_1,x,g4);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+diff(sin(x),x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+diff(%,x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

@@ -1,0 +1,15 @@
+a: 1.0;
+
+rho(omega,phi,theta):=a*(-tan(theta)*cos(omega+phi)+1/cos(theta))/(1+tan(theta)*tan(theta)*sin(omega+phi)*sin(omega+phi));
+
+theta: 0.1*%pi;
+
+g:'[rho(u,phi,theta)*cos(phi),rho(u,phi,theta)*sin(phi),-rho(u,phi,theta)*tan(theta)*sin(u+phi)];
+
+print("setup done; plotting...");
+
+plot3d(g,[u,0,2*%pi],[phi,0,2*%pi])$
+
+print("twister");
+
+stringout(input);

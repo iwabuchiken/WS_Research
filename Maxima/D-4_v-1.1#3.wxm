@@ -1,0 +1,289 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+2+1;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+load("C:/WORKS/WS/Eclipse_Luna/Learn_Maxima/D-4/taylor.mac");
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+load("C:/WORKS/WS/Eclipse_Luna/Learn_Maxima/D-4/taylor.mac");
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+1932-126;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+load("C:/WORKS/WS/Eclipse_Luna/Learn_Maxima/D-4/taylor.mac");
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+1927-123;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+load("C:/WORKS/WS/Eclipse_Luna/Learn_Maxima/D-4/taylor.mac");
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+1929-124;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+1929-124
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+debugmode(true);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+load("C:/WORKS/WS/Eclipse_Luna/Learn_Maxima/D-4/taylor.mac");
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f: sin(x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+n: 5;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+val: 1.25;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+taylor_sum_2(f,x,n, val);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+load("C:/WORKS/WS/Eclipse_Luna/Learn_Maxima/D-4/taylor.mac");
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+taylor_sum(f,x,n, val);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+load("C:/WORKS/WS/Eclipse_Luna/Learn_Maxima/D-4/taylor.mac");
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+taylor_sum_2(f,x,n, val);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f: sin(x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+taylor_sum_2(f,x,n, val);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+n;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+n: 1;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+taylor_sum_2(f,x,n, val);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+load("C:/WORKS/WS/Eclipse_Luna/Learn_Maxima/D-4/taylor.mac");
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+taylor_sum_2(f,x,n, val);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+n: 2; taylor_sum_2(f,x,n, val);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+n: 3; taylor_sum_2(f,x,n, val);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+load("C:/WORKS/WS/Eclipse_Luna/Learn_Maxima/D-4/taylor.mac");
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+n: 5; taylor_sum_2(f,x,n, val);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+load("C:/WORKS/WS/Eclipse_Luna/Learn_Maxima/D-4/taylor.mac");
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%i108;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+n: 5; taylor_sum_2(f,x,n, val);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+n: 10; taylor_sum_2(f,x,n, val);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+t;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+e;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+e: [1,2,3];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+e[0];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+e;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+e(1);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+array(1,2,3);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+array(aa,2,3);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+aa[2,3]: %pi;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+aa;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+arrayinfo(aa);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+aa[2,3];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+aa[2,10]: %e;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+load("C:/WORKS/WS/Eclipse_Luna/Learn_Maxima/D-4/taylor.mac");
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+n: 20; taylor_sum_2(f,x,n, val);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(sin(1.25));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+[ss,tt]: [[1,2],[3,4]];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+ss;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+load("C:/WORKS/WS/Eclipse_Luna/Learn_Maxima/D-4/taylor.mac");
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f: sin(x); val: 1.25;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+val: 0.8;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+n: 10; taylor_sum_2(f,x,n, val);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(sin(0.8));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f2: cos(x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+n: 10; taylor_sum_2(f2,x,n, val);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+cos(val);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f: tan(x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+n: 25; taylor_sum_2(f,x,n, val);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+tan(val);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f: sin(x)+cos(x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+n: 10; taylor_sum_2(f,x,n, val);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(sin(val)+cos(val));
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

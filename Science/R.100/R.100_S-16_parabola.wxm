@@ -1,0 +1,49 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+f: sqrt(x^2 - L^2);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+L: 10;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([f,-f,x], [x,L,100]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f1: x;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f2: sqrt((x+1)^2 - L^2);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([f,f2,x], [x,999,1000]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f3: sqrt((x-1)^2 - L^2);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([f,f2,f3,x], [x,999,1000]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([f,f2,f3,x], [x,48,50]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([f2,x], [x,49.4999999,49.5000001]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([f,f2,f3,x], [x,L,100]);
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

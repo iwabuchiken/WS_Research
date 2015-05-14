@@ -1,0 +1,12 @@
+*********************************
+updated at: 2015/May/02 09:49:42
+*********************************
+
+diff_n(fn,n)
+diff_n(fn,x,n)
+get_taylor_term(fn,x,val,n,sum_)
+get_taylor_term_2(fn,x,val,n,sum_)
+taylor_2(a,b)
+taylor_nth(fn,x,n)
+taylor_sum(fn,x,n, val)
+taylor_sum_2(fn,x,n, val)

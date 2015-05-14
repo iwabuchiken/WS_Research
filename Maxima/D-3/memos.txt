@@ -1,0 +1,54 @@
+a: 1.0;
+
+rho(omega,phi,theta):=a*(-tan(theta)*cos(omega+phi)+1/cos(theta))/(1+tan(theta)*tan(theta)*sin(omega+phi)*sin(omega+phi));
+
+theta: 0.1*%pi;
+
+g:'[rho(u,phi,theta)*cos(phi),rho(u,phi,theta)*sin(phi),-rho(u,phi,theta)*tan(theta)*sin(u+phi)];
+
+range_right = 1*%pi;
+right = 1*%pi;
+right : 1*%pi;
+left : 0.5*%pi;
+
+plot3d(g,[u,left,right],[phi,left,right])$
+
+plot3d(g,[u,0,right],[phi,0,right])$
+plot3d(g,[u,0,range_right],[phi,0,range_right])$
+
+plot3d(g,[u,0,2*%pi],[phi,0,2*%pi])$
+
+<2>
+theta: 0.5*%pi;
+plot3d(g,[u,0,2*%pi],[phi,0,2*%pi])$
+
+theta: 0.1*%pi;plot3d(g,[u,0,2*%pi],[phi,0,2*%pi])$
+
+theta: 0.2*%pi;plot3d(g,[u,0,2*%pi],[phi,0,2*%pi])$
+
+theta: 0.3*%pi;plot3d(g,[u,0,2*%pi],[phi,0,2*%pi])$
+
+theta: 0.4*%pi;plot3d(g,[u,0,2*%pi],[phi,0,2*%pi])$
+
+theta: 0.05*%pi;plot3d(g,[u,0,2*%pi],[phi,0,2*%pi])$
+
+theta: 0.02*%pi;plot3d(g,[u,0,2*%pi],[phi,0,2*%pi])$
+
+<3>
+C:/WORKS/WS/Eclipse_Luna/Learn_Maxima/D-3/file_1.mac
+
+load("C:/WORKS/WS/Eclipse_Luna/Learn_Maxima/D-3/file_1.mac");
+load("C:/WORKS/WS/Eclipse_Luna/Learn_Maxima/D-3/twister.mac");
+
+-----------------------------------------------
+C:/WORKS/WS/Eclipse_Luna/Learn_Maxima/D-3/taylor.mac
+load("C:/WORKS/WS/Eclipse_Luna/Learn_Maxima/D-3/taylor.mac");
+load("C:/WORKS/WS/Eclipse_Luna/Learn_Maxima/D-3/taylor.mac"); taylor_2(2,3);
+
+-----------------------------------------------
+load("C:/WORKS/WS/Eclipse_Luna/Learn_Maxima/D-3/bohm.mac");
+
+-----------------------------------------------
+-----------------------------------------------
+-----------------------------------------------
+-----------------------------------------------

@@ -1,0 +1,213 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+f: 3^x;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(f,[x,-2,-1]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+apropos("log");
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+example(log);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+example(logx);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+example();
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f2: (0.5)^x;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([f,f2],[x,-10,5]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([f,(1/3)^x],[x,-10,10]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+invert(3);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+apropos("inv");
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a:3;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+1/a;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f3: (a^h-1)/h;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(f3,[h,0,1]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a:1.5;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot3d(atan(-x^2+y^3/4),[x,-4,4],[y,-4,4],[grid,50,50]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+kill(a);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot3d(f3,[h,0,1],[a,1,5],[grid,50,50]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+h: 0.01;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(f3,[a,1,3]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f3;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+h;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+kill(h);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+solve(f3 = 1,a);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+h:0.001;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(solve(f3 = 1,a));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+h: 0.0001; f3: (a^h-1)/h; float(solve(f3 = 1,a));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+h: 0.001; f3: (a^h-1)/h; float(solve(f3 = 1,a));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+kill(h);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f3: (a^h-1)/h;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f3: (a^h-1)/h;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot3d(f3,[h,0.0001,0.1],[a,2.6,2.8],[z,0.99,1.05],[grid,70,70]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%e^2);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a:7;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+factorial(7);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+1+a^1/factorial(1);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%e^7;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+load("C:/WORKS/WS/WS_Research/Maxima/D-4/taylor.mac");
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+fn: %e^x;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+val: -3; n:15; taylor_sum_2(fn,x,n, val);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%e^3);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%e^-3);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(%e^x, [x,-3,1]);
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$
