@@ -1,0 +1,25 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+f: a*x^3+b*x^2+c*x+d;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+ans: solve(f=0,x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+ans[3];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+ans[1];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+ans[2];
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

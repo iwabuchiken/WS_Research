@@ -1,0 +1,45 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+w: 1.2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+E0: 2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+E: E0*cos(w*t);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(E,[t,0,%pi*4]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+w: 2.0; E2: E0*cos(w*t);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([E,E2],[t,0,%pi*4]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+b: 1;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+w: 2.0; E3: E0*cos(w*t+b);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([E,E2,E3],[t,0,%pi*4]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([E,E2,E+E2],[t,-%pi*8,%pi*8]);
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

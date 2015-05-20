@@ -1,0 +1,145 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+a: 3; b: 2; c: 5;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+x: 1; y: 1; z: 1;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+x_: 2; y_: 2; z_: 2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+w: 2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+t: 1;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f1: cos(a*x+b*y+c*z-w*t);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f2: cos(a*x+b*y+c*z+u1*sqrt(a^2+b^2+c^2)-w*t);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+kill(t);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+u1: 2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([f1,f2],[t,0,%pi*3]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+abc: [3,2,5];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+abc[1];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+xyz: [1,1,1];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+xyz_: [3,3,3];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+abc.xyz;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+load("vect");
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+abc~xyz;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+express(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+abc;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+xyz;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+abc*xyz;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+abc*xyz_;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+ph: a*x+b*y+c*z-w*t;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+ph2: a*x+b*y+c*z+u1*sqrt(a^2+b^2+c^2)-w*t;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([ph,ph2],[t,-%pi*3,%pi*3]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+w: 3; f3: cos(a*x+b*y+c*z+u1*sqrt(a^2+b^2+c^2)-w*t);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([f1,f2,f3],[t,0,%pi*3]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+t;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+t: 1; h1: sin(x-t);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+t: 2; h2: sin(x-t);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+h2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+x;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+kill(x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+t: 3; h3: sin(x-t);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([h1,h2,h3], [x,-%pi*3,%pi*3]);
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

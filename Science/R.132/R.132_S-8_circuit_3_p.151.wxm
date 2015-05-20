@@ -1,0 +1,73 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([cos(x-%pi/2)],[x,-%pi*3,%pi*3]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+cos(1);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(cos(1));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(cos(-1));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f: cos(x-%pi/2);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f2: -cos(x-%pi/2+%pi);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([cos(x),cos(x-%pi/2),cos(x+%pi)],[x,-%pi*3,%pi*3]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+w: 1;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+C: 2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+E0: 2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f: E0*cos(w*t);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+I: C*diff(f,t);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([f,I],[t,-%pi*3,%pi*3]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+E;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+E: E0*cos(w*t);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+I;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([E,I,E/I],[t,-%pi*3,%pi*3],[y,-5,5]);
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$
