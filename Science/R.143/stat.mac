@@ -1,0 +1,80 @@
+print("stat.mac");
+
+/**********************
+
+	gam(n)
+	
+		n times of gamma functin integration
+
+**********************/
+gam(n):=(
+/*	gam(xs,ys,dots):=(	*/
+	
+	print("gamma"),
+	
+	/*	f: %e^(-t)*t^(x-1),	*/
+
+	/*	res: integrate(f,t,0,inf)	*/
+
+	/*	n: 5,	*/
+
+	/*	setup: arrays	*/
+	
+	array(xs,1,n),
+	array(ys,1,n),
+
+/*		xs[1,1]: 4,	*/
+
+	for i:1 thru n*2 step 1 do (
+	/*	for i:1 thru n step 0.5 do (	*/
+	/*	for i:1 thru n step 1 do (	*/
+	
+		f: %e^(-t)*t^(i/2-1),
+		/*	f: %e^(-t)*t^(i-1),	*/
+		
+		res: integrate(f,t,0,inf),
+		
+		/*	print("i=",i, "/","res=",res),	*/
+		print("i=",i, "/","res=",float(res)),
+		
+		/*	save data	*/
+		/*	xs[1,i]: i,
+		ys[1,i]: res	*/
+		
+		xss[i]: i, yss[i]: res
+			
+	),
+
+	[xs,ys],
+	
+	/*	plot	*/
+	/*	array(dots,1,n),	*/
+	
+	for i:1 thru n step 1 do (
+	
+		/*	dots[1,i]: [xs[1,i],ys[1,i]]	*/
+		dots[i]: [xs[1,i],ys[1,i]]
+	
+	),
+	
+	[xss,yss,dots]
+	
+	/*	[xs,ys,dots]	*/
+	
+);
+
+/*********************************
+
+	gam2(n)
+	
+	@return
+		gamma value for n
+
+**********************************/
+gam2(n):=(
+
+	f: %e^(-t)*t^(n-1),
+		
+	res: integrate(f,t,0,inf)
+
+);
