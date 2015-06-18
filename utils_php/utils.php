@@ -2431,6 +2431,79 @@
 			return $histo;
 			
 		}//get_Histo_stat($d1, $d2)
+
+		public static function
+		decipher_Pref_Search($crypt, $ch, $multi) {
+
+			$chars = array();
+			
+			$cnt_chars = 0;
+			
+// 			$m = "/$ch/";
+// // 			$m = $ch;
+			
+// 			$text = $crypt;
+			
+// 			$res_num = preg_match_all($m, $text, $matches, PREG_SET_ORDER);
+// // 			preg_match_all("/(<([\w]+)[^>]*>)(.*?)(<\/\\2>)/", $html, $matches, PREG_SET_ORDER);
+			
+// 			print_r($matches);
+			
+			///////////////////////////////
+			//
+			// use: strpos
+			//
+			 ///////////////////////////////
+			$res = strpos($crypt, $ch);
+			
+// 			printf("[%s : %d] strpos =>", __FILE__, __LINE__);
+			
+// 			echo "<br>"; echo "<br>";
+			
+// 			print_r($res);
+			
+// 			echo "<br>"; echo "<br>";
+			
+			$len_ch = strlen($ch);
+			
+			 while($res !== false) {
+// 			 while($res != false) {
+			 	
+			 	$len_disp = ($len_ch + 1) < strlen($crypt) ? $len_ch + 1 : $len_ch;
+			 	
+				printf("[%s : %d] strpos => %d (%s)", 
+						__FILE__, __LINE__, 
+						$res, substr($crypt, $res, $len_disp));
+// 						$res, substr($crypt, $res, $len_ch + 1));
+				
+				echo "<br>"; echo "<br>";
+				
+// 				print_r($res."(");
+				
+				echo "<br>"; echo "<br>";
+				
+				// store
+				array_push($chars, array($res, substr($crypt, $res, $len_disp)));
+				
+				// count
+				$cnt_chars ++;
+				
+				$res = strpos($crypt, $ch, $res + 1);
+// 				$res = strpos($crypt, $ch);
+				
+			 }
+// 				$res = strpos($crypt, $ch);
+				
+			
+			echo "<br>"; echo "<br>";
+			
+			
+			
+			return $cnt_chars > 0 ? $chars : null;
+// 			return $chars;
+// 			return null;
+			
+		}//decipher_Pref_Search
 		
 	}//class Utils
 	
