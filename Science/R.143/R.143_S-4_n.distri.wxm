@@ -1,0 +1,285 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+a: 3;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f: %e^(-x^2/(2*a));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(f,[x,-5,5]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+r: 10; plot2d(f,[x,-r,r]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+r: 10; plot2d(f,[x,-r,r],[gnuplot_preamble,"set title 'n.d.'; set key bottom"]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+r: 10; plot2d(f,[x,-r,r],[gnuplot_preamble,"set title 'n.d.'; set key left bottom"]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+kill(a);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot3d(f,[x,-r,r],[a,0.1,3]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f: %e^(-x^2/(2*a));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+power: -x^2/(2*a);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot3d(power,[x,-r,r],[a,0.1,3]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+r: 10; plot2d([f,f/2],[x,-r,r],[gnuplot_preamble,"set title 'n.d.'; set key bottom"]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a: 3;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+r: 10; plot2d(f,[x,140,200],[gnuplot_preamble,"set title 'n.d.'; set key bottom"]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([%e^(-x^2),%e^(-x),%e^(-x^3),%e^(-x^4)],[x,-0.5,0.5]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([%e^(-x^2),%e^(-x^4)],[x,-5,5]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([%e^(-x^2),%e^(-x^4),%e^(-x^(1/2))],[x,-5,5]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([%e^(-x^2),%e^(-x^4),%e^(-2*x^2),%e^(-(1/2)*x^2)],[x,-5,5]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([%e^(-x^2),%e^(-2*x^2),%e^(-(1/2)*x^2),%e^(-x^4),%e^(-(1/2)*x^4)],[x,-5,5]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([%e^(-x^2),%e^(-2*x^2),%e^(-(x-2)^2),%e^(-x^4),%e^(-(1/2)*x^4)],[x,-5,5]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([%e^(-x^2),%e^(-2*x^2),%e^(-(x-2)^2),%e^(-(x-2)^2) + 1,%e^(-x^4),%e^(-(1/2)*x^4)],[x,-5,5]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([%e^(-x^2),%e^(-x^4),%e^(-x^6),%e^(-x^8)],[x,-5,5]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([%e^(-x^2),%e^(sin(x)),sin(x)],[x,-20,20]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([%e^(-x^2),%e^(sin(x)),sin(x),%e^(cos(x)),cos(x)],[x,-20,20]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([%e^(-sin(x)),sin(%e^x)],[x,-5,5]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([%e^(-sin(x)),sin(%e^(-x))],[x,-5,5]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([%e^(-sin(x)),sin(%e^(-x)),%e^(-sin(%e^(-x)))-1.5],[x,-5,5]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+integrate(sin(%e^(-x)),x,-5,5);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+diff(sin(%e^(-x)),x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(-%e^(-x)*cos(%e^(-x)),[x,-5,5]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([cos(%e^(-x)),-%e^(-x)*cos(%e^(-x))],[x,-2,5]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+solve(diff(cos(%e^(-x)),x) = 0,x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+diff(cos(%e^(-x)),x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+solve(% = 0,x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+limit(%o82,x,0);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(-%e^(-x)*cos(%e^(-x)),[x,-2,15]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+inf;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+limit(%o82,x,inf);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+limit(%e^(-x)*sin(%e^(-x)),x,inf);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+limit(cos(%e^(-x)),x,inf);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([%e^(-x^2/2),%e^(-x^2/3),%e^(-x^2/3)*cos(x),cos(x)],[x,-5,5]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([%e^(-x^2/2),%e^(-x^2/3),%e^(-x^2/3)*cos(x),cos(x)],[x,-5,5]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a: [%e^(-x^2/2),%e^(-x^2/3),%e^(-x^2/3)*cos(x),cos(x),%e^(-x^2/3)*cos(2*x),cos(2*x)];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(a,[x,-5,5]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a2: [sin(x),cos(x),sin(x)*cos(x),sin(x)/cos(x)];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(a2,[x,-5,5]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+rng: [x,-1,1];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(a2,rng);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+g1: %e^(-a*x^2);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+g2: %e^(-a*y^2);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+integrate(g1,x,-5,5);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+integrate(g2,y,-5,5);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+subst(2,a,%o129);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+kill(a);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+g1;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+integrate(g1,x,-inf,inf);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+g3;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+g3: %e^(-x^2);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+integrate(g3,x,-inf,inf);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(integrate(g3,x,-r,r),[r,1,100]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+r;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+kill(r);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(integrate(g3,x,-r,r),[r,1,100]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+limit(integrate(g3,x,-r,r),r,100);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+erf(100);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(erf(50));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot3d(log(x*y),[x,0.001,1],[y,0.1,100]);
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

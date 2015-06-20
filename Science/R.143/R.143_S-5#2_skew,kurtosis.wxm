@@ -1,0 +1,267 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+f: (1/sqrt(2*%pi))*%e^(-x^2/2);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+integrate(f,x,-inf,inf);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f2: x^3*(1/sqrt(2*%pi))*%e^(-x^2/2);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+integrate(f2,x,-inf,inf);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+f3: x^4*(1/sqrt(2*%pi))*%e^(-x^2/2);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+integrate(f3,x,-inf,inf);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f2: (1/sqrt(2*%pi))*%e^(-x^4/2);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+rng: [x,-5,5];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(f2,rng);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f2_k: integrate(x^3*(1/sqrt(2*%pi))*%e^(-x^4/2),x,-inf,inf);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f2_s: integrate(x^4*(1/sqrt(2*%pi))*%e^(-x^4/2),x,-inf,inf);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f3: 1/(sqrt(2*%pi)*sigma)*%e^(-x^2/(2*sigma^2));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f3_k: integrate(((x-0)/s)^4*1/(sqrt(2*%pi)*s)*%e^(-x^2/(2*s^2)),x,-inf,inf);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f3_k: integrate(((x-1)/s)^4*1/(sqrt(2*%pi)*s)*%e^(-x^2/(2*s^2)),x,-inf,inf);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+solve(%=0.430,s);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+s: 2; f3_k: integrate(((x-0)/s)^4*1/(sqrt(2*%pi)*s)*%e^(-x^2/(2*s^2)),x,-inf,inf);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+s: 3; f3_k: integrate(((x-0)/s)^4*1/(sqrt(2*%pi)*s)*%e^(-x^2/(2*s^2)),x,-inf,inf);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+s: 1; u: 1; f3_k: integrate(((x-u)/s)^4*1/(sqrt(2*%pi)*s)*%e^(-(x-u)^2/(2*s^2)),x,-inf,inf);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+s: 1; u: 2; f3_k: integrate(((x-u)/s)^4*1/(sqrt(2*%pi)*s)*%e^(-(x-u)^2/(2*s^2)),x,-inf,inf);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+s: 2; u: 2; f3_k: integrate(((x-u)/s)^4*1/(sqrt(2*%pi)*s)*%e^(-(x-u)^2/(2*s^2)),x,-inf,inf);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+kill(s); kill(u);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f3_k;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+s: 2; u: 2; f3_k: integrate(((x-u)/s)^4*1/(sqrt(2*%pi)*s)*%e^(-(x-u)^2/(2*s^2)),x,-inf,inf);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f3_k: integrate(((x-u)/s)^4*1/(sqrt(2*%pi)*s)*%e^(-(x-u)^2/(2*s^2)),x,-inf,inf);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f4: ((x-u)/s)^4;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+s: 1; f4: ((x-u)/s)^4;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot3d(f4,[x,-5,5],[u,-5,5]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+kill(s);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+u: 1; f4: ((x-u)/s)^4;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot3d(f4,[x,-50,50],[s,-0.01,0.01]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f4: (1/sqrt(2*%pi))*%e^(-x^4/2);f
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+rng;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(f4,rng);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f4: (1/(sqrt(2*%pi)*s))*%e^(-x^4/(2*s^2));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot3d(f4,[x,-5,5],[s,0.3,4]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f3;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+s: 0.5; f4: (1/(sqrt(2*%pi)*s))*%e^(-x^4/(2*s^2));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f4_k: integrate((x/s)^4*f4,x,-inf,inf);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+s: 2; f4: (1/(sqrt(2*%pi)*s))*%e^(-x^4/(2*s^2));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f4_k: integrate((x/s)^4*f4,x,-inf,inf);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+kill(s);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f4_k: integrate((x/s)^4*f4,x,-inf,inf);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(f4_k,[s,0.5,3],[y,0,6]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+ans: solve(f4_k = 3,s);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+rhs(ans[4]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f4;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+s;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f4: (1/(sqrt(2*%pi)*s))*%e^(-x^4/(2*s^2));
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+f4_k: integrate((x/s)^4*f4,x,-inf,inf);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f4: (1/(sqrt(2*%pi)*s))*%e^(-x^2/(2*s^2));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f4_k: integrate((x/s)^4*f4,x,-inf,inf);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+s:1; f4_1: (1/(sqrt(2*%pi)*s))*%e^(-x^2/(2*s^2));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+s:2; f4_2: (1/(sqrt(2*%pi)*s))*%e^(-x^2/(2*s^2));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+s:3; f4_3: (1/(sqrt(2*%pi)*s))*%e^(-x^2/(2*s^2));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+fs: [f4_1, f4_2, f4_3];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(fs,rng);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+rng: [x,-10,10];
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

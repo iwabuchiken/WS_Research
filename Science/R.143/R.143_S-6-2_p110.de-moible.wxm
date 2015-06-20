@@ -1,0 +1,325 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+u: 20; s: 16;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f: (1/(sqrt(2*%pi)*s))*%e^(-(x-u)^2/(2*s^2));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+rng: [x,0,100];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(f,rng);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+u: 200; s: 160; f2: (1/(sqrt(2*%pi)*s))*%e^(-(x-u)^2/(2*s^2));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+rng: [x,0,800];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+fs: [f,f2];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(fs,rng);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(f2,rng);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+u: 200; s2: 160; f2: (1/(sqrt(2*%pi)*sqrt(s2)))*%e^(-(x-u)^2/(2*s2));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+u: 20; s2: 16; f: (1/(sqrt(2*%pi)*sqrt(s2)))*%e^(-(x-u)^2/(2*s2));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(f,rng);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([f,f2],rng);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+rng: [x,0,300];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(f2,rng);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+kill(u); kill(s2); u: 20; s2: 16;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f: (1/(sqrt(2*%pi)*sqrt(s2)))*%e^(-(x-u)^2/(2*s2));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f_k: integrate(((x-u)/s)^4*f,x,-inf,inf);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+u: 200; s2: 160;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f2: (1/(sqrt(2*%pi)*sqrt(s2)))*%e^(-(x-u)^2/(2*s2));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f2_k: integrate(((x-u)/s)^4*f2,x,-inf,inf);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+sqrt(160);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%/1000;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+sd: sqrt(0.2*0.8/1000);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+u;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+u: 1000;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+u-sd;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+u: 0.2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+u+sd;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+u+1.96*sd;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+u - 1.96*sd;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+1.96*sd;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+kill(u);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f2: u - 1.96 * sd;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+0.01 - 1.96 * sd;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+u;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+u: 0.01;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+n;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+n: 1000;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+sd: sqrt((u*(1-u))/n);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+u - 1.96*sd;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+kill(u);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+sd: sqrt((u*(1-u))/n);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f2: u - 1.96 * sd;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(f2,[u,0.01,0.2]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+diff(f2,u);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(diff(f2,u),[u,0.01,0.2]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([f2,diff(f2,u)],[u,0.01,0.2]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+limit(diff(f2,u),u,0);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(diff(f2,u),[u,10^-10,10^-9]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+ans: solve(f2-diff(f2,u)=0,u);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+ans[1];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f2_d: diff(f2,u);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+solve(f2 - f2_d = 0, u);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([f2,diff(f2,u)],[u,10^-4,10^-3]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+solve(f2=0,u);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([f2,diff(f2,u)],[u,10^-3.5,10^-2.9],[y,-0.005,0.005]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([u,1.96*sd],[u,10^-10,10^-6],[y,0,2*10^-6]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+solve(u - 1.96 * sd = 0,u);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+1.96*2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+sd;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+kill(n);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+sd: sqrt(u*(1-u)/n);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+d: 3.92*sd;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot3d(d,[u,0.01,0.5],[n,100,1000]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+d;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+subst(600,n,d);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+subst(0.2,u,%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+subst(1000,n,d);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(subst(0.2,u,%));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+6.40-4.95;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%/2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%o159/%o161;
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

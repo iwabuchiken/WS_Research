@@ -1,0 +1,102 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+data: [0,0.27067052131632,0.54161198409541,0.54161198409541,0.36089393801753,0.18026634141216,
+0.071998268491943,0.023951375938094,0.0068261250171059,0.0017014065357952];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+sum(data);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+add(data);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+add(input):= ans: 0, for elem in input do ans: ans + elem;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+data;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+ans: 0;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+for item in data do ans: ans + item;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+ans;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+input;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+2000*0.001;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+n: 2000; p: 1/1000;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+lamda: n*p;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+prob: %e^-lamda*lamda^k/factorial(k);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+r: [k,0,5];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(prob,r);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+kill(n);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+lamda: n*p;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+prob: %e^-lamda*lamda^k/factorial(k);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot3d(prob,[k,0,5],[n,10,100]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+combi(a,b):= factorial(a)/(factorial(a-b)*factorial(b));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+p;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+n;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+binom: combi(n,k)*p^k*(1-p)^(n-k);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot3d([binom,prob,[k,0,5],[n,50,100]]);
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

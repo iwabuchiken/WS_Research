@@ -1,0 +1,101 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+float(131.23/861.39);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(92.47/861.39);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+A: (a+w*b+w^2*c)^3;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+B: (a+w^2*b+w*c)^3;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+C1: A+B;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+expand(C1);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+t1: s+t;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+t2: s+w*t;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+t3: s+w^2*t;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+t4: t1*t2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+expand(t4);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+t5: t1*t2*t3;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+expand(t5);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%o15;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+(%o15)*t3;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+expand(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+(a+b+c)^2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+expand(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+(x-a)*(x-b)*(x-c);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+expand(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+(x+a)*(x+b)*(x+c);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+expand(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+(-3^3)^2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+-3^3;
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

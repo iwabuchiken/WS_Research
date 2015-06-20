@@ -1,0 +1,177 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+sigma: 1; u: 0;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f2: (1/(sqrt(2*%pi)*sigma))*%e^(-(x-u)^2/(2*sigma^2));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+rng: [x,-5,5];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(f2,rng);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+subst(0.4,x,f2);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+yrng: [y,0.395,0.4];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(f2,rng,yrng);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+rng: [x,-0.5,0.5];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+integrate(f2,x,1,2);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+kill(a);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+solve(integrate(f2,x,1,a) = 0.14,a);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+solve(integrate(f2,x,1,a) = 0.05,a);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f2_: integrate(f2,x,-inf,1);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(f2_);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f2_: integrate(f2,x,-inf,a);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+solve(f2_ = 0.9, a);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(1/sqrt(%pi));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%e^(-1/2));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%e^(-2));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%e^(-9/2));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+center: subst(0,x,f2);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+subst(2,x,f2);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%o48/%o47;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+integrate(f2,x,-1,1);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f2_: integrate(f2,x,-inf,a);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(f2_,[a,-5,5]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+solve(f2_ = 0.5,a);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f2_;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+diff(f2_,a);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(%,[a,-5,5]);
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

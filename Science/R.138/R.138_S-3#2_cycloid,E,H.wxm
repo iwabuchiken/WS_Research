@@ -1,0 +1,89 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+r: 3;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+x: r*(th-sin(th));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(x,[th,0,%pi]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+y: r*(1-cos(th));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(y,[th,0,%pi]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(y,[th,-%pi*3,%pi*3]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(x,[th,-%pi*3,%pi*3]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([th,sin(th)],[th,-%pi*3,%pi*3]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot3d(x^2+y^2,[x,-1,1],[y,-1,1]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+kill(x); kill(y);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f: x^2+y^2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot3d(f,[x,-1,1],[y,-1,1]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot3d(f,[x,-2,2],[y,-2,2]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+diff(f,x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+solve(diff(f,x)=0,x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+kill(f);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f: 1/sqrt(2)*ph1 + 1/sqrt(2)*ph1;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+integrate(f,ph1);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+integrate(f,ph1,0,1);
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

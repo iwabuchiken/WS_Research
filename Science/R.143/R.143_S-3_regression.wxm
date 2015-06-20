@@ -1,0 +1,129 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+47500*10^3*10^3;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%/400;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%/90;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%o2/2400;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%o2/2400);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%/300000;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+4.75/3.2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+1.48*10^8/(3*10^5);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%/30;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+97*10^3*10^3;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%/360.0;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%*0.8;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+load("C:/WORKS/WS/Eclipse_Luna/Learn_Maxima/D-7/regress.mac");
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+LSE(-1000,1000,-1000,1000);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+kill(a);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+tmp: 0;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+tmp: tmp + 1;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f2: -2*(-b-13*a+155)-2*(-b-14*a+156.5)-2*(-b-15*a+157.1);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+factor(f2);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+factor(-26*(-b-13*a+155)-28*(-b-14*a+156.5)-30*(-b-15*a+157.1));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+b;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a: 0.72; b: 146.06;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f3: a*x+b;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(f3,[x,10,18]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+kill(x);
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

@@ -1,0 +1,182 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+combi(a,b):= factorial(a)/(factorial(a-b)*factorial(b));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+combi(4,2);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+p: 1/1000;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+n: 2000;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+combi(n,0)*p^0*(1-p)^n;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+break: 0;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+combi(n,break)*p^break*(1-p)^(n-break);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+kill(break);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+f: combi(n,break)*p^break*(1-p)^(n-break);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+r: [break,0,3];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(f,r);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(subst(0,break,f));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(subst(1,break,f));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a: 2; float(subst(a,break,f));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a: 3; float(subst(a,break,f));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+(1-p)^2000;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([discrete,[0,1,2,3],[%o16,%o17,%o19,%o23]]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a: 4; float(subst(a,break,f));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a: 5; float(subst(a,break,f));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a: 6; float(subst(a,break,f));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([discrete,[0,1,2,3,4,5,6],[%o16,%o17,%o19,%o23,%o31,%o33,%o35]]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a: 7; float(subst(a,break,f));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a: 8; float(subst(a,break,f));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a: 9; float(subst(a,break,f));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+xs: [0,1,2,3,4,5,6,7,8,9];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+ys: [%o16,%o17,%o19,%o23,%o31,%o33,%o35,%o38,%o40,%o42];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([discrete,xs,ys]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+n: 100; f: combi(n,break)*p^break*(1-p)^(n-break);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a: 0; float(subst(a,break,f));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a: 1; float(subst(a,break,f));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a: 3; float(subst(a,break,f));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a: 4; float(subst(a,break,f));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+xs: [0,1,2,3,4];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+ys: [%o49,%o51,%o53,%o55];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d([discrete,xs,ys]);/* REF discrete http://eagle.cs.kent.edu/MAXIMA/maxima_8.html */;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+ys;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+n;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+kill(n); f: combi(n,break)*p^break*(1-p)^(n-break);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot3d(f,[n,10,100],[break,1,5]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+xs*ys;
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$
