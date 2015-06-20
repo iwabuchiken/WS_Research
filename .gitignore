@@ -1,4 +1,4 @@
 Bio/*
 
-libs/plugins/*
-libs/sysplugins/*
+#libs/plugins/*
+#libs/sysplugins/*
