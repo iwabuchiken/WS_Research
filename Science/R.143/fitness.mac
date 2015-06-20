@@ -1,0 +1,51 @@
+print("fitness.mac");
+
+/**********************
+
+	fitness(b,n)
+	
+		b			expected
+		observed	observed
+		n			num of samples
+
+**********************/
+fitness(b,n) := (
+
+	kill(res),
+
+	print("fitness"),
+	
+	f: (x-b)^2/x,
+	
+	sum: 0,
+	
+	b: 1,
+	
+	for i:1 thru 10 step 1 do (
+		
+		/*	res: (n - b)^2 / b,	*/
+	
+		/*	res: (10-i)^2/i,	*/
+		res: (i-b)^2/i,
+	
+		print("i=",i,": ","b=",b,"/","n=","/","res=",float(res)),
+			
+		sum: sum + res,
+		
+		print("sum=",float(sum))
+	
+	),
+	
+	print("b=",b,"/","n=","/","sum=",float(sum))
+	
+	/*	f: %e^(-t)*t^(n-1),	*/
+	
+	/*	f: (t-1)^(n-1)	*/		/* n/w	*/
+	
+	/*	f: t^(n-1)	*/
+	
+	/*	f: %e^(-t)*(x-b)^(n-1)	*/
+
+	/*	f: (x-b)^2/x	*/
+
+);
