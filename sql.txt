@@ -1,0 +1,17 @@
+sqlite3 C:\WORKS\WS\WS_Research\libs\development.sqlite3
+
+.explain on
+
+pragma table_info(tokens);
+
+SELECT COUNT(*) FROM tokens;
+
+SELECT * FROM tokens WHERE hin_1 = '空白';
+SELECT * FROM tokens WHERE orig_id = 32570;
+
+SELECT * FROM tokens WHERE orig_id = '';
+SELECT * FROM tokens WHERE orig_id = '' OR 1;
+
+SELECT * FROM tokens WHERE hin_1 = '';	#=> no result
+SELECT * FROM tokens WHERE hin_1 = ''; DELETE FROM tokens WHERE 1;	#=> rows deleted
+SELECT * FROM tokens WHERE hin_1 = ''; DELETE FROM tokens WHERE 1 or hin_1 = '';	#=> rows deleted
