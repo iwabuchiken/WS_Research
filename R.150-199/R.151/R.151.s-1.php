@@ -289,6 +289,277 @@ function do_D_2_V_1_1__Expectations($smarty) {
 		
 }//do_D_2_V_1_1__Expectations
 
+function 
+s_1__Meteorite_Falls() {
+
+	/*******************************
+		open
+	*******************************/
+	$fname_In = "data/meteorite-falls.txt";
+	
+	$file_In = fopen($fname_In, "r");
+
+	$line = fgetcsv($file_In, 1000, "\t");
+	
+	$row = 1;
+	
+	$years = array();
+	
+	while ($line !== FALSE) {
+		
+		$num = count($line);
+		
+		$date = $line[1];
+		
+		$len_years_string = strlen($date);
+		
+		$year = $len_years_string > 4 ? substr($date, strlen($date) - 4): $date;
+// 		$year = substr($date, strlen($date) - 4);
+		
+		array_push($years, $year);
+		
+// 		echo "<p> $num fields in line $row: "
+// 				.$line[1]
+// 				."($year)"
+// 				."<br /></p>\n";
+		
+		
+		
+// 		$row++;
+		
+		$line = fgetcsv($file_In, 1000, "\t");
+		
+// 		for ($c=0; $c < $num; $c++) {
+			
+// 			echo $data[$c] . "<br />\n";
+			
+// 		}
+		
+	}//while ($line !== FALSE)
+	
+	printf("[%s : %d] years => %d", 
+					Utils::get_Dirname(__FILE__, CONS::$proj_Name), __LINE__, count($years));
+// 					Utils::get_Dirname(__FILE__, CONS::$proj_Name), __LINE__, $years);
+	
+	echo "<br>"; echo "<br>";
+	
+	/*******************************
+		close
+	*******************************/
+	fclose($file_In);
+	
+	/*******************************
+		build: data
+	*******************************/
+	$data = array();
+	
+// 	$start = 1600;
+	$start = 1700;
+	
+	$end = 2015;
+	
+	$range = $end - $start;
+	
+	$tick = 50;
+	
+	$numOf_Slots = $range / $tick;
+	
+	printf("[%s : %d] numOf_Slots => %d", 
+					Utils::get_Dirname(__FILE__, CONS::$proj_Name), __LINE__, $numOf_Slots);
+	
+	echo "<br>"; echo "<br>";
+	
+// 	$tick = 100;
+	
+	$histo = array();
+	
+	$year_Start = $start;
+	$year_End = $start;
+	
+	for ($i = 0; $i < $numOf_Slots; $i++) {
+// 	for ($i = 0; $i < 8; $i++) {
+		
+// 		$tmp = array(
+			
+// 				$start + $tick * $i => 0
+				
+// 		);
+		
+// 		array_push($data, $tmp);
+		
+		$data[$start + $tick * $i] = 0;
+
+		$year_Start = $start + $tick * $i;
+		$year_End = $year_Start + $tick;
+		
+		$tmp = array(
+		
+				$year_Start, $year_End - 1
+// 				$start * $i, $start + $tick * ($i + 1),
+// 				$start, $start + $tick * 1,
+					
+		);
+		
+		array_push($histo, $tmp);
+		
+	}
+// 	$data[$start] = 0;
+// 	$data[$start + $tick * 1] = 0;
+// 	$data[$start + $tick * 2] = 0;
+// 	$data[$start + $tick * 3] = 0;
+// 	$data[1900] = 0;
+// 	$data[2000] = 0;
+// 	$data[1700] = 0;
+// 	$data[1800] = 0;
+// 	$data[1900] = 0;
+// 	$data[2000] = 0;
+
+	$total = count($years);
+	
+	foreach ($years as $y) {
+	
+		
+		
+		if ($y >= $start && $y < $start + $tick * 1) {
+		
+			$data[$start] ++;
+			
+		} else if ($y >= $start + $tick * 1 && $y < $start + $tick * 2) {
+			
+			$data[$start + $tick * 1] ++;
+			
+		} else if ($y >= $start + $tick * 2 && $y < $start + $tick * 3) {
+			
+			$data[$start + $tick * 2] ++;
+			
+		} else if ($y >= $start + $tick * 3 
+					&& $y < $start + $tick * 4) {
+			
+			$data[$start + $tick * 3] ++;
+			
+		} else if ($y >= $start + $tick * 4 
+					&& $y < $start + $tick * 5) {
+			
+			$data[$start + $tick * 4] ++;
+			
+		} else if ($y >= $start + $tick * 5 
+					&& $y < $start + $tick * 6) {
+			
+			$data[$start + $tick * 5] ++;
+			
+		} else if ($y >= $start + $tick * 6 
+					&& $y < $start + $tick * 7) {
+			
+			$data[$start + $tick * 6] ++;
+			
+		} else {
+		
+			
+		}//if ($y >= 1800 && $y < 1900)
+		
+		;
+		
+	}//foreach ($years as $y)
+
+	// report
+	printf("[%s : %d] distributed", 
+					Utils::get_Dirname(__FILE__, CONS::$proj_Name), __LINE__);
+	
+	echo "<br>"; echo "<br>";
+
+	foreach ($data as $k => $v) {
+	
+		printf("[%s : %d] %d => %d (%.4f)", 
+// 		printf("[%s : %d] %d => %d (%f)", 
+					Utils::get_Dirname(__FILE__, CONS::$proj_Name), __LINE__, 
+					$k, $v, number_format($v / (float)$total, 4, ".", ","));
+// 					$k, $v, number_format($v / (float)$total, 4, ".", ","));
+
+		echo "<br>"; echo "<br>";
+		
+	}//foreach ($data as $k => $v)
+
+	/*******************************
+		build: histo
+	*******************************/
+	foreach ($data as $k => $v) {
+
+// 		printf("[%s : %d] data: k = %d, v = %d", 
+// 						Utils::get_Dirname(__FILE__, CONS::$proj_Name), __LINE__, $k, $v);
+		
+// 		echo "<br>"; echo "<br>";
+		
+		foreach ($histo as $k2 => $v2) {
+		
+			if ($v2[0] == $k) {
+// 			if ($v2 == $k) {
+				
+				array_push($histo[$k2], $v);
+				
+			};
+			
+		}//foreach ($histo as $k2 => $v2)
+		
+	}//foreach ($data as $value)
+	
+	printf("[%s : %d] histo =>", 
+					Utils::get_Dirname(__FILE__, CONS::$proj_Name), __LINE__);
+	
+	
+	echo "<br>"; echo "<br>";
+	
+	print_r($histo);
+	
+// 	print_r($data);
+	
+	echo "<br>"; echo "<br>";
+	
+	/*******************************
+		save: histo
+	*******************************/
+	$fname_Out = "data/meteorite-falls.histo.txt";
+	
+	$file_Out = fopen($fname_Out, "w");
+	
+	// header
+	fwrite($file_Out, "Meteorite falls\n");
+	fwrite($file_Out, sprintf("start=%d\tend=%d\ttotal=%d\n", $start, $end, $total));
+	fwrite($file_Out, "start\tend\tnum\tratio\n");
+	
+	$count = 0;
+	
+	$decimal = 4;
+	
+	for ($i = 0; $i < count($histo); $i++) {
+		
+		$h = $histo[$i];
+		
+		$res = fwrite($file_Out, 
+					sprintf("%d\t%d\t%d\t%.".$decimal."f\n", 
+// 					sprintf("%d\t%d\t%d\t%f\n", 
+							$h[0], $h[1], $h[2], 
+							number_format($h[2]/(float)$total, $decimal, ".", ",")));
+		
+		if ($res !== false) {
+			
+			$count ++;
+			
+		}
+		
+	}
+	
+	// close
+	fclose($file_Out);
+	
+	// report
+	printf("[%s : %d] file written => %d lines", 
+					Utils::get_Dirname(__FILE__, CONS::$proj_Name), __LINE__, $count);
+	
+	
+	echo "<br>"; echo "<br>";
+	
+}//s_1__Meteorite_Falls()
+
 function execute() {
 
 	/*******************************
@@ -298,6 +569,8 @@ function execute() {
 	
 	smarty_Setup($smarty);
 
+	s_1__Meteorite_Falls();
+	
 }
 
 execute();
