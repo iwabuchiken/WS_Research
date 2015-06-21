@@ -1,0 +1,15 @@
+load("C:/WORKS/WS/Eclipse_Luna/Learn_Maxima/D-7/regress.mac");
+load("C:/WORKS/WS/WS_Research/R.100-149/R.148/s-6.mac");
+
+param: 5; res: 0;
+
+addup_sin(param,res):= (
+
+[php]
+php C:\WORKS\WS\Eclipse_Luna\Learn_Maxima\D-4\util.php
+
+
+-----------------------------------------------
+-----------------------------------------------
+-----------------------------------------------
+-----------------------------------------------

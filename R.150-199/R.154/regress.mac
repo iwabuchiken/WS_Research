@@ -1,0 +1,38 @@
+/*	Least-Squares Method	*/
+LSE(a1,a2,b1,b2):=(
+
+	print("least-squares estimation"),
+	
+	y: [155,156.5,157.1],
+	
+	x: [13,14,15],
+	
+	sum: 0,
+	
+	for i:1 thru 3 step 1 do (
+	
+			f: a*x[i] + b,
+			
+			print(y[i]),
+			
+			print(y[i] - f),
+			
+			sum: sum + (y[i] - f)^2
+			
+	),
+	
+	print("sum is: ", sum),
+
+	/*	diff	*/
+	print("diff(a): ", diff(sum,a)),
+
+	/*	diff	*/
+	print("diff(b): ", diff(sum,b)),
+
+	/*  plot   */
+	/*	plot3d(sum, [a,-5,45],[b,-40,40])	*/
+	/*	plot3d(sum, [a,a1,a2],[b,b1,b2])	*/
+	plot3d(diff(sum,a), [a,a1,a2],[b,b1,b2])
+
+
+);

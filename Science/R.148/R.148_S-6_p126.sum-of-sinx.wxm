@@ -1,0 +1,263 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(x^2,[x,-2,2]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f: x^2-1;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+ans: solve(f=0,x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+ans^2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f: x^4 - 6;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+solve(f=0,x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+sum(sin(x), x, 1,100);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f: sum(sin(x), x, 1,n);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(f,[n,10,200]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+rn: [n,-%pi,100];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+fs: [f,sin(n)];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(fs,rn);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+rn: [n,0,%pi*10];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+abs(-10);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+omit_minus(param):= if param >= 0 then param else 0;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+omit_minus(-10);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+omit_minus(10);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+fs: [f,omit_minus(sin(n))];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+omit_zero(param):=if param = 0 then 1 else param;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+omit_zero(1);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+omit_zero(10);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+omit_zero(0);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+ans: sum(sin(x),x,0,%pi*10);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(ans);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+ans: sum(omit_minus(sin(x)),x,0,%pi*10);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(ans);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+fs: [f,omit_minus(sin(n))];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+sum_sin: sum(sin(x),x,0,n);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+sum_sin_omit_minus: sum(omit_minus(sin(x)),x,0,n);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+fs: [sum_sin, sum_sin_omit_minus];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(fs,rn);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(sum_sin,rn);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(omit_minus(sin(x)),rn);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+fs: [sum_sin, sum_sin_omit_minus];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+sum_sin_abs: sum(abs(sin(x)),x,0,n);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+fs: [sum_sin, sum_sin_omit_minus, sum_sin_abs];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+for i:1 while i < 5 step 1 do print i;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+for i:1 while i < 5 do print ("yes", i);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+addup_sin(param):= res: 0, for i:1 while i <= param do print("yes");
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+addup_sin(param):= res: 0;for i:1 while i <= param do print("yes");
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+addup_sin(param,res):= for i:1 while i <= param do (print("yes",i),res: res + 1, print("result=", res));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+addup_sin(5,res);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+res;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+res: 0;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+addup_sin(5,res);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+res;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+addup_sin(param,res):= for i:1 while i <= param do (print("yes",i),res: res + sin(i), print("result=", float(res)));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+addup_sin(5,res);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+kill(addup_sin);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+load("C:/WORKS/WS/WS_Research/R.100-149/R.148/s-6.mac");
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+param: 5; res: 0;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+addup_sin(param,res);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+addup_sin(param);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(addup_sin(n), rn);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+addup_sin(3);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+addup_sin(3.5);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+addup_sin(4);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+load("C:/WORKS/WS/WS_Research/R.100-149/R.148/s-6.mac");
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+addup_sin([-3,10]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+r: [-3,3];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+r[1];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+r[0,1];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(addup_sin([-3,n]), [n,5,10]);    /* not working  */;
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

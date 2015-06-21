@@ -1,0 +1,20 @@
+/*	addup_sin(param,res):= (	*/
+/*	addup_sin(param):= (	*/
+addup_sin(range):= (
+
+	res: 0,
+
+	for i:range[1] thru range[2] do (	/* COMMENT: "THRU" => error	*/
+	/*	for i:1 thru 100 do (	*/
+		
+		/*	print("sin ",float(i/10), " = ", float(sin(i/10))),	*/
+		
+		res: res + sin(i) 
+		
+		/*	print("result=", float(res))	*/
+		
+	),
+	
+	float(res)
+	
+);

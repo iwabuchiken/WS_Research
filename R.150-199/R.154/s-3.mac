@@ -1,0 +1,30 @@
+combi(n,r):= (
+
+	res: factorial(n)/(factorial(r)*factorial(n-r)),
+	
+	res
+	
+);
+
+combi_(n,r):= (
+
+	res: factorial(n)/(factorial(r)*factorial(n-r)),
+	
+	res
+	
+);
+
+/*
+	binomial	=> a built-in function
+					so, here using "binomial_"(an underbar at the end)
+
+*/
+binomial_(n,x,p):= (
+
+	coeff: combi(n,x),
+	
+	res: coeff*p^x*(1-p)^(n-x),
+	
+	float(res)
+
+);

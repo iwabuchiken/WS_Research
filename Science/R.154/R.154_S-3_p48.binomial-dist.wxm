@@ -1,0 +1,134 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+combi(3,1);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+factorial(3);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+load("C:/WORKS/WS/WS_Research/R.150-199/R.154/s-3.mac");
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+n: 10; r: 5;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+combi(n,r);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%*(1/2)^n;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+kill(r);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(combi(n,r),[r,1,10]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+n;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+diff(combi(n,r),r);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+combi(n,r);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+solve(diff(combi(n,r),r)=0,r);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+kill(n);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot3d(combi(n,r),[r,1,10],[n,1,20]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot3d(combi(n,r),[r,1,40],[n,1,40]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+n: 10; x: 5; p: 1/2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+binomial(n,x,p);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+binomial(10,2);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+load("C:/WORKS/WS/WS_Research/R.150-199/R.154/s-3.mac");
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+binomial_(n,x,p);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+kill(x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+binomial_(n,x,p);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(binomial_(n,x,p),[x,1,8]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+kill(p);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot3d(binomial_(n,x,p),[x,1,8],[p,0.1,0.9]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+p;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+p: 0.5;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+kill(n);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(binomial_(n,x,p),[x,1,8]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+binomial_(n,x,p);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot3d(binomial_(n,x,p),[x,1,19],[n,10,20]);
+/* [wxMaxima: input   end   ] */
+
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$
