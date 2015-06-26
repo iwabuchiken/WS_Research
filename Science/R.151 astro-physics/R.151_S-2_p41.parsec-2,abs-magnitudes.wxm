@@ -1,0 +1,130 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+cot(%pi/5);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(cot(%pi/5));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(cot(0.4));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(cot(0.3));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(cot(0.2));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(cot(0.000005));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f2: 1.55391*10^-5*cot(th);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+solve(f2 = 1, th);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+acot(7074412289/109930);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+1/3600*1/180;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+th;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+th: 1.54320*10^-6;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+cot(th);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%*1.55391;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+1.55391*6.48004;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+cot(1/3600*%pi/180);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%*150*10^9;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%/(9.46*10^15);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+load("log10");
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+log10(2.6);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%-1.44;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%+5;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+m: -1.44;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+d: 2.6;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+M: m + 5 - 5*log10(d);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+m: -0.01; d: 1.4; M: m + 5 - 5*log10(d);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+m: -26.789; d: 4.84814*10^-6; M: m + 5 - 5*log10(d);
+/* [wxMaxima: input   end   ] */
+
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

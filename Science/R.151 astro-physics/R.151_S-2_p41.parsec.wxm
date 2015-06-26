@@ -1,0 +1,203 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+147^2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%pi*(89/180);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+numer: true;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+89/180;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+tan(0.494*%pi);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+ly: 9.46*10^15;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+au: 147*10^9;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+au*53.0453/ly;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%*365;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%*24;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+89.9/180*%pi;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+au*tan(1.5690);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+tan(1.5690);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%*au/ly;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%*365;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%-3;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%*24;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%-3;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%*60;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+%*24;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+9.4607/147;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f: tan(x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+solve(f=2,x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+solve(f=6.4358*10^8,x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+tan(1.570796325241088);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+180*(1.570796325241088/%pi);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+90-%;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+(%/180)*%pi;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+1/360/180*%pi;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+1.5538/4.848;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+10^7/32.050;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+1/360;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%/180;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%*%pi;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+tan(%pi/2-%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%*au;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+ly;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+3.032092649451546*10^15/ly;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+au;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+load("log10");
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+log10(au);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+au: 150*10^9;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+tan(%pi/2 - 4.84813*10^-5);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%*au;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+ly;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+au*tan(%pi/2 - 4.84813*10^-5);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%/ly;
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

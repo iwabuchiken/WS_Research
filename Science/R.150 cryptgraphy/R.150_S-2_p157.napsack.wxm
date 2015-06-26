@@ -1,0 +1,69 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+apropos("num");
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+numer;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+1/3;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+numer;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+numer: true;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+1/3;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a: 1260*764;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%/2731;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+2731*350;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%-a;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+2292*1605/2731;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+2731*1345;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a: 2292*1605;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+b: 2292*1605/2731;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+c: 2731*1347;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a-c;
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

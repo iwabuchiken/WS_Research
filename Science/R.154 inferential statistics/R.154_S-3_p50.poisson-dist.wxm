@@ -1,0 +1,65 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+f: %e^-m*m^x/factorial(x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+x: 2; f: %e^-m*m^x/factorial(x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(f,[m,1,5]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+kill(x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+m: 2; f: %e^-m*m^x/factorial(x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(f,[x,0,5]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+kill(m);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f: %e^-m*m^x/factorial(x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot3d(f,[x,0,10], [m,1,5]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+numer: true;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%e^-0.61;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%*(0.61/(0+1));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%*(0.61/(1+1));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%*(0.61/(2+1));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+699*4%;
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

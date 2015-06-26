@@ -1,0 +1,181 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+log(-1);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(log(x), [x,-2,2]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(log(x), [x,-2,-1]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(log(-1));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+imagpart(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(imagpart(log(x)), [x,-2,-1]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(log(-2));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+imagpart(%) - %pi;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+b: a*10^-2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+log(b/a);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+log10(4);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+ans1: float(log(4));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+ans2: float(log(10));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+load(log10)$
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+log10(100);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+ans1;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+ans2: float(log(10)*log10(4));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+ans3: float(log10(4)/log10(%e));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(log10(1.1));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(log10(10^2));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f: -2.5*log10(10^x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(6/2.5);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+solve(f=5, x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+solve(f=6, x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(10^-2.4);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+solve(f=1, x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+10^-0.4;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+-2.5*log10(10^-0.4);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+-2.5*log10(10^1.6);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+-2.5*log10(10^-0.4*1.1);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+-2.5*log10((10^-0.4)*1.1);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+-2.5*log10((10^-0.4)*1.01);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f2: -2.5*log10(10^-0.4*n);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+solve(f2=-26.78,n);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+26.78/2.5;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+10^10.712*10^0.4;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f2: -2.5*log10((10^-0.4)*n);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+log10(10^-0.4*n);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+solve(f2 = -26.78, n);
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$
