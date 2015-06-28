@@ -1,0 +1,81 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+R: 6.96*10^8;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f: 2*%pi*R/(27*24+6);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+2.12844*%pi;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+Re: 6.356*10^6;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(2*%pi*Re/24);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+16*60*24;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%/6680;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+R;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+R*2*%pi*44.2/(643*24);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+12525.3/6680;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+0.2^3;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+4*10^5;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+40/1.27;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+600/(6.96*10^5);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+2000/600;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%);
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$
