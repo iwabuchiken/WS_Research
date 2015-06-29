@@ -3,3 +3,6 @@ Bio/*
 #libs/plugins/*
 #libs/sysplugins/*
 *.jpg
+
+*.o
+*.exe

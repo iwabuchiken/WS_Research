@@ -1,0 +1,6 @@
+eclipse.preferences.version=1
+environment/project/com.android.toolchain.gcc.1347055550/MINGW_HOME/delimiter=;
+environment/project/com.android.toolchain.gcc.1347055550/MINGW_HOME/operation=append
+environment/project/com.android.toolchain.gcc.1347055550/MINGW_HOME/value=C\:\\MinGW\\mingw32
+environment/project/com.android.toolchain.gcc.1347055550/append=true
+environment/project/com.android.toolchain.gcc.1347055550/appendContributed=true
