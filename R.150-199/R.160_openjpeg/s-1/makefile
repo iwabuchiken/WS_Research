@@ -1,6 +1,9 @@
+#C_SRCS := test.c convert.c
 C_SRCS := test.c
+C_SRCS_2 := convert.c
 #C_SRCS := main.cpp
 C_OBJ := main.o
+C_OBJ_2 := convert.o
 C_EXE := main.exe
 
 #DRAWSTUFF_OBJ	:= C:\ode-0.11.1\build\ODE_D_2\obj\DebugDoubleLib\ODE_D_2\drawstuff\src\resources.res
@@ -34,7 +37,9 @@ $(C_EXE): make_obj
 	
 	echo "linking..."
 	
-	gcc $(LIBS_DIR) -o $(C_EXE) $(C_OBJ) $(LIBS)  $(INC)
+#	gcc $(LIBS_DIR) -o $(C_EXE) $(C_OBJ) $(LIBS)  $(INC)
+	gcc $(LIBS_DIR) -o $(C_EXE) $(C_OBJ) $(C_OBJ_2) $(LIBS)  $(INC)
+	
 #	gcc -L$(LIBS_DIR) -o $(C_EXE) $(C_OBJ) $(LIBS)  $(INC)
 #	gcc -L$(LIBS_DIR) -o $(C_EXE) $(C_OBJ) $(LIBS)
 #	g++ -L"C:\ode-0.11.1\lib\DebugDoubleLib" -o "ODE_D_2.exe" $(C_OBJ) $(DRAWSTUFF_OBJ) $(LIBS)
@@ -53,7 +58,10 @@ make_obj:
 	echo "creating obj files..."
 	
 #	echo g++ $(C_SRCS) $(INC) -S -o $(C_OBJ)
+
 	gcc -c $(C_SRCS) -o $(C_OBJ) $(INC)
+	gcc -c $(C_SRCS_2) -o $(C_OBJ_2) $(INC)
+	
 #	gcc -c $(C_SRCS) -o $(C_OBJ)
 #	g++ -g -D_DEBUG -DdDOUBLE -DWIN32 $(C_SRCS) $(INC) -c -o $(C_OBJ)
 #	g++ -g -D_DEBUG -DdDOUBLE -DWIN32 $(C_SRCS) $(INC) -S -o $(C_OBJ)

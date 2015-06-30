@@ -53,8 +53,8 @@
 
 //#ifndef OPENJPEG_H
 //#define OPENJPEG_H
-#include "openjpeg.h"
-//#include "include/openjpeg.h"
+//#include "openjpeg.h"
+#include "include/openjpeg.h"
 //#endif
 
 #include "convert.h"
@@ -627,6 +627,8 @@ opj_image_t* bmptoimage(const char *filename, opj_cparameters_t *parameters)
     File_h.bfOffBits = (DWORD)(getc(IN) << 8) + File_h.bfOffBits;
     File_h.bfOffBits = (DWORD)(getc(IN) << 16) + File_h.bfOffBits;
     File_h.bfOffBits = (DWORD)(getc(IN) << 24) + File_h.bfOffBits;
+
+    //aa
 
     /* INFO HEADER */
     /* ------------- */
