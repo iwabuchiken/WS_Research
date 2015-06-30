@@ -5,6 +5,7 @@ C_EXE := main.exe
 
 #DRAWSTUFF_OBJ	:= C:\ode-0.11.1\build\ODE_D_2\obj\DebugDoubleLib\ODE_D_2\drawstuff\src\resources.res
 
+#INC:=	-IC:/WORKS/WS/WS_Research/R.150-199/R.160_openjpeg/s-1/include
 INC:=	-I./include
 #INC:=	-Iinclude
 #INC:=	-IC:\ode-0.11.1\include
@@ -13,7 +14,10 @@ LIBS:=	-lopenjp2
 #LIBS:=	-lode_doubled -ldrawstuffd -luser32 -lwinmm -lgdi32 -lopengl32 -lglu32
 #LIBS:=	-ldrawstuffd
 
-LIBS_DIR:=	C:\WORKS\Downloads\openjpeg-2.1.0-win32-x86\lib
+LIBS_DIR:=	-LC:/WORKS/Downloads/openjpeg-2.1.0-win32-x86/lib
+#LIBS_DIR:=	-LC:\WORKS\Downloads\openjpeg-2.1.0-win32-x86\lib
+#LIBS_DIR:=	-LC:\WORKS\Downloads\openjpeg-2.1.0-win32-x86\lib -LC:\WORKS\Downloads\openjpeg-2.1.0-win32-x86\bin
+#LIBS_DIR:=	C:\WORKS\Downloads\openjpeg-2.1.0-win32-x86\lib
 
 RM	:= del
 
@@ -30,7 +34,8 @@ $(C_EXE): make_obj
 	
 	echo "linking..."
 	
-	gcc -L$(LIBS_DIR) -o $(C_EXE) $(C_OBJ) $(LIBS)  $(INC)
+	gcc $(LIBS_DIR) -o $(C_EXE) $(C_OBJ) $(LIBS)  $(INC)
+#	gcc -L$(LIBS_DIR) -o $(C_EXE) $(C_OBJ) $(LIBS)  $(INC)
 #	gcc -L$(LIBS_DIR) -o $(C_EXE) $(C_OBJ) $(LIBS)
 #	g++ -L"C:\ode-0.11.1\lib\DebugDoubleLib" -o "ODE_D_2.exe" $(C_OBJ) $(DRAWSTUFF_OBJ) $(LIBS)
 	
