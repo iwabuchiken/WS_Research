@@ -37,6 +37,12 @@
 #ifndef __J2K_CONVERT_H
 #define __J2K_CONVERT_H
 
+//#ifndef OPENJPEG_H
+//#define OPENJPEG_H
+#include "openjpeg.h"
+//#endif
+
+
 /**@name RAW component encoding parameters */
 /*@{*/
 typedef struct raw_comp_cparameters {
