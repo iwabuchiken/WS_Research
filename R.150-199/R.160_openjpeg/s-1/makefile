@@ -1,3 +1,5 @@
+#@echo off
+
 #C_SRCS := test.c convert.c
 C_SRCS := test.c
 C_SRCS_2 := convert.c
@@ -34,7 +36,10 @@ all: $(C_EXE)
 $(C_EXE): make_obj
 #ODE_D_2.exe: make_obj
 #ODE_D_2.exe: $(OBJS) $(USER_OBJS)
+
+#	@echo off
 	
+#	"linking..."
 	echo "linking..."
 	
 #	gcc $(LIBS_DIR) -o $(C_EXE) $(C_OBJ) $(LIBS)  $(INC)
