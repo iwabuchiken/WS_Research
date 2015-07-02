@@ -13,5 +13,6 @@ EXECUTABLES :=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
+R.150-199/R.165 \
 R.150-199/R.160_openjpeg/s-1 \
 

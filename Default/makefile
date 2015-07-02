@@ -8,6 +8,7 @@ RM := del
 
 # All of the sources participating in the build are defined here
 -include sources.mk
+-include R.150-199/R.165/subdir.mk
 -include R.150-199/R.160_openjpeg/s-1/subdir.mk
 -include subdir.mk
 -include objects.mk
@@ -29,7 +30,7 @@ all: WS_Research
 WS_Research: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: MinGW C Linker'
-	gcc -L"C:\WORKS\Downloads\openjpeg-2.1.0-win32-x86\lib" -o "WS_Research" $(OBJS) $(USER_OBJS) $(LIBS)
+	gcc  -o "WS_Research" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 

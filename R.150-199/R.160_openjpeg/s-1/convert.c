@@ -746,7 +746,7 @@ opj_image_t* bmptoimage(const char *filename, opj_cparameters_t *parameters)
             fprintf(stderr, "\nError: fread return a number of element different from the expected.\n");
             return NULL;
         }
-//aa
+
         index = 0;
 
         for(y = 0; y < H; y++)

@@ -5,6 +5,8 @@
  *      Author: kbuchi
  */
 
+//#include <windows.h>
+
 #include <stdio.h>
 
 #include <stdlib.h>
@@ -12,6 +14,9 @@
 
 #include <zlib.h>
 //#include <png.h>
+
+//#include <windows.h>
+//#include <Windows.h>
 
 #include "include/convert.h"
 #include "include/openjpeg.h"
@@ -58,6 +63,17 @@ typedef struct {
 } BITMAPINFOHEADER_t;
 
 #endif	// up to here
+
+#define ANSI_COLOR_RED     "\x1b[31m"
+#define ANSI_COLOR_GREEN   "\x1b[32m"
+#define ANSI_COLOR_YELLOW  "\x1b[33m"
+#define ANSI_COLOR_BLUE    "\x1b[34m"
+#define ANSI_COLOR_MAGENTA "\x1b[35m"
+#define ANSI_COLOR_CYAN    "\x1b[36m"
+
+#define ANSI_COLOR_BRIGHT  "\x1b[1m"
+#define ANSI_COLOR_RESET   "\x1b[0m"
+
 
 ///////////////////////////////
 //
@@ -409,16 +425,60 @@ opj_image_t* bmptoimage_TEST
         }
 
 
+
+        index = 0;
+
+        printf("[%s:%d] ************** W => %d\n", __FILE__, __LINE__, W);
+
+
+        for(y = 0; y < H; y++)
+        {
+            unsigned char *scanline = RGB + (3 * (unsigned int)W + PAD) * ((unsigned int)H - 1 - (unsigned int)y);
+
+//            printf("[%s:%d] ********* scanline => %s\n", __FILE__, __LINE__, scanline);
+
+
+            for(x = 0; x < W; x++)
+            {
+                unsigned char *pixel = &scanline[3 * x];
+                image->comps[0].data[index] = pixel[2];	/* R */
+                image->comps[1].data[index] = pixel[1];	/* G */
+                image->comps[2].data[index] = pixel[0];	/* B */
+                index++;
+            }
+        }
+
+        free(RGB);
+
+        printf("[%s:%d] RGB => freed\n", __FILE__, __LINE__);
+
+
+        //test
+//        system("color 9a");
+
 	    ///////////////////////////////
 		//
 		// report
 		//
 		 ///////////////////////////////
+//		printf("\x1b[32m [%s:%d] read data => done\n", __FILE__, __LINE__);
+//		printf(ANSI_COLOR_GREEN "[%s:%d] read data => done\n", __FILE__, __LINE__);
+//		printf("\x1b[33m [%s:%d] read data => done\n", __FILE__, __LINE__);
+//		printf(ANSI_COLOR_YELLOW "[%s:%d] read data => done\n", __FILE__, __LINE__);
 		printf("[%s:%d] read data => done\n", __FILE__, __LINE__);
 
 	}//if (Info_h.biBitCount == 24)
 
+	else
+	{
+		fprintf(stderr,
+				"Other system than 24 bits/pixels or 8 bits (no RLE coding) "
+				"is not yet implemented [%d]\n", Info_h.biBitCount);
+	}
 
+	//test
+//	system("dir");
+//	system("color");
 
 	///////////////////////////////
 	//
@@ -433,6 +493,9 @@ opj_image_t* bmptoimage_TEST
 	//
 	 ///////////////////////////////
 	printf("[%s:%d] bmptoimage_TEST: returning image...\n", __FILE__, __LINE__);
+
+	printf("[%s:%d] >------------------------------\n", __FILE__, __LINE__);
+
 
 	return image;
 
