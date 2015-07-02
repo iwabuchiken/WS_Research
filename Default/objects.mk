@@ -4,5 +4,5 @@
 
 USER_OBJS :=
 
-LIBS := -lopenjp2
+LIBS :=
 
