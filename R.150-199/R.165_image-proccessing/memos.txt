@@ -1,4 +1,4 @@
-pushd C:\WORKS\WS\WS_Research\R.150-199\R.160_openjpeg\s-1
+pushd C:\WORKS\WS\WS_Research\R.150-199\R.165_image-proccessing
 make
 
 main.exe
