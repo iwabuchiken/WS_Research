@@ -3,7 +3,8 @@ C_OBJ := main.o lib.o
 #C_OBJ := main.o
 C_EXE := main.exe
 
-INC:=	-I./include
+INC:=	-I.
+#INC:=	-I./include
 
 DEPS:=	lib.h
 
@@ -13,9 +14,12 @@ DEPS:=	lib.h
 
 RM	:= del
 
+#$(C_EXE): %.o
+#	gcc -o $@ $^ $(INC)
 $(C_EXE): $(C_OBJ)
 	gcc -o $@ $^ $(INC)
 
+#REF http://www.cs.colby.edu/maxwell/courses/tutorials/maketutor/
 #REF "the $< is the first item in the dependencies list"
 #REF "the -o $@ says to put the output of the compilation in the file named on the left side of the :"
 %.o: %.c $(DEPS)
@@ -40,7 +44,7 @@ $(C_EXE): $(C_OBJ)
 #	
 #	gcc -c $(C_SRCS) -o $(C_OBJ) $(INC)
 #	
-#clean:
-#	
-#	$(RM) $(C_OBJ)
+clean:
+	
+	$(RM) $(C_OBJ)
 #	

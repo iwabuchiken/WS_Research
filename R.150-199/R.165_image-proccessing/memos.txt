@@ -1,5 +1,7 @@
 pushd C:\WORKS\WS\WS_Research\R.150-199\R.165_image-proccessing
+pushd C:\WORKS\WS\WS_Research\R.150-199\R.165_image-proccessing\src
 make
+make -f src\makefile
 
 main.exe
 

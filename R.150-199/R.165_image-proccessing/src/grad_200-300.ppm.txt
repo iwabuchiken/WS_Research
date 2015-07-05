@@ -1,0 +1,13 @@
+[grad_200-300.ppm]
+File name = grad_200-300.ppm
+Directory = 
+Compression = None
+Resolution = 0 x 0 DPI
+Image dimensions = 200 x 300  Pixels (2:3)
+Print size = 7.1 x 10.6 cm; 2.78 x 4.17 inches
+Color depth = 16,7 Million   (24 BitsPerPixel)
+Number of unique colors = 200
+Disk size = 175.84 KB (180,065 Bytes)
+Current memory size = 175.82  KB (180,040 Bytes)
+File date/time = 2015/07/05 / 08:34:19
+
