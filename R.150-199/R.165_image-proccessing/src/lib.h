@@ -29,4 +29,6 @@ int init_Image_Gradation_2
 
 int isnumeric(char *);
 
+int* expand_Array(int*, int);
+
 #endif /* LIB_H_ */

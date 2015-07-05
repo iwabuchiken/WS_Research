@@ -98,7 +98,8 @@ void exec_Gradation(int argc, char *argv[]) {
 
 	sprintf(fname_Out, "grad_2_%d-%d.ppm", x, y);
 
-	int result = init_Image_Gradation_2(fname_Out, x, y);
+	int result = init_Image_Gradation_3(fname_Out, x, y);
+//	int result = init_Image_Gradation_2(fname_Out, x, y);
 //	int result = init_Image_Gradation(fname_Out, x, y);
 
 

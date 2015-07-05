@@ -22,3 +22,6 @@ R.150-199/R.165_image-proccessing/*.ppm
 R.150-199/R.165_image-proccessing/data/img_src/*.bmp
 
 *.ppm
+
+
+pdf.js

@@ -17,6 +17,12 @@
 #include <stdlib.h>
 #endif
 
+#ifndef MATH_H_
+#include <math.h>
+#endif
+
+
+
 ///////////////////////////////
 //
 // init_Image
@@ -330,6 +336,23 @@ int init_Image_Gradation_2
 int init_Image_Gradation_3
 (char *fname_Out, int x, int y) {
 
+//	printf("[%s:%d] init_Image_Gradation_3\n", __FILE__, __LINE__);
+
+
+	int a[] = {1,2,3,4};
+
+	int len = sizeof(a) / sizeof(int);
+
+	expand_Array(a, len);
+
+	///////////////////////////////
+	//
+	// expand
+	//
+	 ///////////////////////////////
+
+
+
 
 	///////////////////////////////
 	//
@@ -340,6 +363,128 @@ int init_Image_Gradation_3
 
 }//init_Image_Gradation_3
 
+int* expand_Array(int* data, int len) {
+
+//	int a[] = {1,2,3,4};
+//	char a[] = {1,2,3,4};
+
+//	int len = sizeof(a) / sizeof(int);
+//	int len = sizeof(a) / sizeof(char);
+
+	int i,j;
+
+	for (i = 0; i < len; ++i) {
+
+		printf("[%s:%d] data[%d] = %d\n", __FILE__, __LINE__, i, data[i]);
+
+	}
+
+//	int n = 8;
+	int n = 9;
+
+	int integer = n / len;
+
+	float decimal = ((float) n / len) - integer;
+
+	int residue = n - (len * integer);
+
+	printf("[%s:%d] n = %d, len = %d / integer = %d, decimal = %f, residue = %d\n",
+			__FILE__, __LINE__,
+			n, len, integer, decimal, residue
+	);
+
+	///////////////////////////////
+	//
+	// expand
+	//
+	 ///////////////////////////////
+	int* result = NULL;
+
+	int len_New;
+
+	if (decimal == 0) {
+
+		// len of the new data
+		len_New = len * 2;
+
+		//REF malloc http://www.codingunit.com/c-tutorial-the-functions-malloc-and-free
+		// malloc double the size of the original data
+		result = malloc(sizeof(int) * len_New);
+//		result = malloc(sizeof(int) * len * 2);
+
+		// init each element
+		j = 0;
+
+		for (i = 0; i < len * 2; ++i) {
+
+			result[i] = data[j];
+
+			// every n --> increment the index of the original data
+			if (i % integer) {
+
+				j ++;
+
+			}
+
+		}
+
+	} else {
+
+		// len of the new data
+		len_New = len * 2 + 1;
+
+		// malloc double the size of the original data
+		result = malloc(sizeof(int) * len_New);
+//		result = malloc(sizeof(int) * len * 2 + 1);
+
+		// init each element
+		j = 0;
+
+		// init first integer + 1 elements of the new data
+		for (i = 0; i < integer + 1; ++i) {
+
+			result[i] = data[j];
+
+		}
+
+		// increment j	=> i.e. next element in the data
+		j ++;
+
+		for (; i < len_New; ++i) {
+//		for (; i < len * 2; ++i) {
+
+			result[i] = data[j];
+
+			// every n --> increment the index of the original data
+			if ((i - (integer + 1))% integer) {
+//			if (i % integer) {
+
+				j ++;
+
+			}
+
+		}
+
+	}
+
+//	int len_New = sizeof(result) / sizeof(int);
+
+	///////////////////////////////
+	//
+	// report
+	//
+	///////////////////////////////
+	for (i = 0; i < len_New; ++i) {
+//	for (i = 0; i < len * 2; ++i) {
+
+		printf("[%s:%d] new data[%d] = %d\n", __FILE__, __LINE__, i, result[i]);
+
+	}
+
+
+	return NULL;
+
+}
 
 //REF http://www.linuxquestions.org/questions/programming-9/c-equivalent-of-java%27s-isnumeric-287888/ 02-08-2005, 07:36 PM
 int isnumeric(char *str)
