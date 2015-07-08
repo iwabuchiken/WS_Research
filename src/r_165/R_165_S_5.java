@@ -6,6 +6,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Locale;
 
+import utils.Methods;
+
 public class R_165_S_5 {
 
 	public static void main(String[] args) {
@@ -18,10 +20,13 @@ public class R_165_S_5 {
 		///////////////////////////////////
 		String dpath_Dst = "C:/WORKS/WS/WS_Research/R.150-199/R.165_image-proccessing/data/s-5";
 		
-		String fname = "test_java.ppm";
+		String fname = "test_java" 
+					+ Methods.get_TimeLabel(Methods.getMillSeconds_now()) 
+					+ ".ppm";
 //		String fname = "test_java.ppm";
 		
-		R_165_S_5.create_PPM_File(dpath_Dst + "/" + fname);
+		Methods.create_PPM_File(dpath_Dst + "/" + fname);
+//		R_165_S_5.create_PPM_File(dpath_Dst + "/" + fname);
 //		R_165_S_5.create_PPM_File(fname);
 		
 		String msg;
