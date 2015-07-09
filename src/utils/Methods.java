@@ -310,6 +310,7 @@ public class Methods {
 			
 			BufferedWriter bw = new BufferedWriter(fw);
 
+			//REF http://stackoverflow.com/questions/6981555/how-to-output-binary-data-to-a-file-in-java answered Aug 8 '11 at 11:47
 			DataOutputStream os = new DataOutputStream(new FileOutputStream(fout.getAbsoluteFile()));
 //			DataOutputStream os = new DataOutputStream(new FileOutputStream("C:\\binout.dat"));
 			
@@ -379,6 +380,155 @@ public class Methods {
 		}
 		
 	}//create_PPM_File(String fname)
-	
+
+	/*******************************
+	 * 
+	 * @param data		=> data to expand  e.g. {1,2,3,...,255}<br>
+	 * @param len		=> length of <b>data</b><br>
+	 * @param x		=> width of the new ppm image (in pixels)<br>
+	 * @param y		=> height of the new ppm image (in pixels)<br>
+	 * 
+	 * @return
+	 * An integer array of expanded data<br>
+	 * 
+	 * 		e.g. {1,1,1,2,2,2,3,3,3,..., 244,244,255,255}
+	 * 
+	 *******************************/
+	public static int[]
+	expand_Array(int data[], int len, int x, int y) {
+
+		///////////////////////////////////
+		//
+		// vars
+		//
+		///////////////////////////////////
+		// counter for for-loop
+		int i,j;
+
+		///////////////////////////////////
+		//
+		// len max: max cell sequence number of the new ppm file
+		//	e.g. source is of 480 x 400
+		//		=> max cell(i.e. 479, 399) value
+		//
+		///////////////////////////////////
+		int len_Max = (x + y) - 1;
+		
+		// quo
+		int quo = len_Max / len;
+		  
+		// residue
+		int resi = len_Max - (len * quo);
+
+		//debug
+		String msg;
+		msg = String.format(Locale.JAPAN, 
+				"[%s : %d] len = %d / x = %d / y = %d\nlen_Max = %d / quo = %d / resi = %d", 
+				Thread
+				.currentThread().getStackTrace()[1].getFileName(), Thread
+				.currentThread().getStackTrace()[1].getLineNumber(), 
+				
+				len, x, y,
+				len_Max, quo, resi
+				
+		);
+
+		System.out.println(msg);
+		
+
+
+		///////////////////////////////
+		//
+		// expand
+		//
+		 ///////////////////////////////
+		// new data array
+		int[] data_New = new int[len_Max];
+
+		///////////////////////////////////
+		//
+		// build: +1 items
+		//
+		//		length => quo + 1
+		//
+		///////////////////////////////////
+		// counter for the new data array
+		int cnt_New = 0;
+		
+		// counter for the original data array
+		int cnt_Data = 0;
+		
+		// input numbers
+		for (i = 0; i < resi; i++) {
+			
+			for (j = 0; j < (quo + 1); j++) {
+				
+				data_New[cnt_New] = data[cnt_Data];
+				
+				cnt_New ++;
+				
+			}//for (j = 0; j < (quo + 1); j++)
+			
+			cnt_Data ++;
+			
+		}//for (i = 0; i < resi; i++)
+
+		///////////////////////////////////
+		//
+		// build: +0 items
+		//
+		//		length => quo
+		//
+		///////////////////////////////////
+		// array length of the items
+		//	which are to have the numbers of quo
+		int len_PlusZero = data.length - resi;
+		
+		for (i = 0; i < len_PlusZero; i++) {
+			
+			for (j = 0; j < quo; j++) {
+				
+				data_New[cnt_New] = data[cnt_Data];
+				
+				cnt_New ++;
+				
+			}//for (j = 0; j < (quo + 1); j++)
+			
+			cnt_Data ++;
+			
+		}//for (i = 0; i < resi; i++)
+		
+		///////////////////////////////
+		//
+		// report
+		//
+		///////////////////////////////
+//		int tmp = (len_Max - 10 < 1) ? len_Max : 10;
+		
+		for (i = 0; i < len_Max; i++) {
+//			for (i = 0; i < tmp; i++) {
+//			for (i = 0; i < 10; i++) {
+			
+//			String msg;
+			msg = String.format(Locale.JAPAN, "[%s : %d] data_New[%d] => %d", Thread
+					.currentThread().getStackTrace()[1].getFileName(), Thread
+					.currentThread().getStackTrace()[1].getLineNumber(), i, data_New[i]);
+
+			System.out.println(msg);
+			
+			
+		}
+		
+		
+		///////////////////////////////////
+		//
+		// return
+		//
+		///////////////////////////////////
+		return data_New;
+//		return null;
+		
+	}//expand_Array(int data[])
+
 }//public class Methods
 
