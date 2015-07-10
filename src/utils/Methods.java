@@ -381,6 +381,88 @@ public class Methods {
 		
 	}//create_PPM_File(String fname)
 
+	public static void 
+	create_PPM_File(String fname, int[][][] data, int x, int y) {
+		
+		File fout = new File(fname);
+		
+		try {
+			
+//			FileWriter fw = new FileWriter(fout.getAbsoluteFile());
+//			
+//			BufferedWriter bw = new BufferedWriter(fw);
+			
+			//REF http://stackoverflow.com/questions/6981555/how-to-output-binary-data-to-a-file-in-java answered Aug 8 '11 at 11:47
+			DataOutputStream os = new DataOutputStream(new FileOutputStream(fout.getAbsoluteFile()));
+//			DataOutputStream os = new DataOutputStream(new FileOutputStream("C:\\binout.dat"));
+			
+			///////////////////////////////////
+			//
+			// header
+			//
+			///////////////////////////////////
+//			int x = 480;
+//			int y = 400;
+			
+			String arg;
+			arg = String.format(Locale.JAPAN, 
+					"P6\n# OutputStream\n%d %d\n255\n", 
+					x, y
+					);
+			
+			os.writeBytes(arg);
+			
+//			bw.write(arg);
+			
+//			int image[][][] = new int[y][x][3];
+//			
+//			for(int j=0; j < y; j++){
+//				
+//				for(int i=0; i < x; i++){
+//					
+//					image[j][i][0] = 0x00;
+//					image[j][i][1] = 0x00;
+////				    image[j][i][1] = 0xff;
+//					image[j][i][2] = 0xff;
+//					
+//				}
+//				
+//			}
+			
+			for(int j=0; j < y; j++){
+				
+				for(int i=0; i < x; i++){
+					
+					os.write(data[j][i][0]);
+					os.write(data[j][i][1]);
+					os.write(data[j][i][2]);
+					
+//					image[j][i][0] = 0x00;
+//					image[j][i][1] = 0xff;
+//					image[j][i][2] = 0xff;
+					
+				}
+				
+			}
+			
+			
+//			bw.close();
+			os.close();
+			
+			String msg;
+			msg = String.format(Locale.JAPAN, "[%s : %d] file => closed: %s", Thread
+					.currentThread().getStackTrace()[1].getFileName(), Thread
+					.currentThread().getStackTrace()[1].getLineNumber(), fout.getAbsolutePath());
+			
+			System.out.println(msg);
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}//create_PPM_File(String fname)
+	
 	/*******************************
 	 * 
 	 * @param data		=> data to expand  e.g. {1,2,3,...,255}<br>
@@ -412,6 +494,7 @@ public class Methods {
 		//		=> max cell(i.e. 479, 399) value
 		//
 		///////////////////////////////////
+//		int len_Max = (x + y);
 		int len_Max = (x + y) - 1;
 		
 		// quo
@@ -503,21 +586,21 @@ public class Methods {
 		// report
 		//
 		///////////////////////////////
-//		int tmp = (len_Max - 10 < 1) ? len_Max : 10;
-		
-		for (i = 0; i < len_Max; i++) {
-//			for (i = 0; i < tmp; i++) {
-//			for (i = 0; i < 10; i++) {
-			
-//			String msg;
-			msg = String.format(Locale.JAPAN, "[%s : %d] data_New[%d] => %d", Thread
-					.currentThread().getStackTrace()[1].getFileName(), Thread
-					.currentThread().getStackTrace()[1].getLineNumber(), i, data_New[i]);
-
-			System.out.println(msg);
-			
-			
-		}
+////		int tmp = (len_Max - 10 < 1) ? len_Max : 10;
+//		
+//		for (i = 0; i < len_Max; i++) {
+////			for (i = 0; i < tmp; i++) {
+////			for (i = 0; i < 10; i++) {
+//			
+////			String msg;
+//			msg = String.format(Locale.JAPAN, "[%s : %d] data_New[%d] => %d", Thread
+//					.currentThread().getStackTrace()[1].getFileName(), Thread
+//					.currentThread().getStackTrace()[1].getLineNumber(), i, data_New[i]);
+//
+//			System.out.println(msg);
+//			
+//			
+//		}
 		
 		
 		///////////////////////////////////
@@ -529,6 +612,37 @@ public class Methods {
 //		return null;
 		
 	}//expand_Array(int data[])
+
+	public static int[][][] 
+	build_PPM_Data(int[] data_New, int x, int y) {
+		
+		int[][][] ppm_Data = new int[y][x][3];
+		
+		// offset: used for the index of data_New
+		int x_Offset = 0;
+		
+		// height
+		for (int i = 0; i < y; i++) {
+			
+			// width
+			for (int j = 0; j < x; j++) {
+			
+				// set values
+				ppm_Data[i][j][0] = data_New[j + x_Offset];
+				ppm_Data[i][j][1] = data_New[j + x_Offset];
+				ppm_Data[i][j][2] = data_New[j + x_Offset];
+				
+			}//for (int j = 0; j < x; j++)
+			
+			// increment the offset
+			x_Offset ++;
+			
+		}//for (int i = 0; i < y; i++)
+		
+		
+		return ppm_Data;
+		
+	}//build_PPM_Data(int[] data_New, int x, int y)
 
 }//public class Methods
 
