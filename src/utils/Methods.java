@@ -644,5 +644,180 @@ public class Methods {
 		
 	}//build_PPM_Data(int[] data_New, int x, int y)
 
+	public static int[][][] 
+	build_PPM_Circle(int x, int y) {
+		
+		// ppm data
+		int[][][] data = new int[y][x][3];
+
+		// center coordinate
+		int center_X = x / 2;
+		int center_Y = y / 2;
+		
+		// array of radiuses
+		int numOf_Circles = 6;
+		
+		int[] rs = new int[numOf_Circles];
+
+		int unit = center_X / numOf_Circles;
+		
+		for (int i = 0; i < numOf_Circles; i++) {
+			
+			rs[i] = i * unit;
+			
+		}
+		
+		// array of color sets
+		int[][] col_Set = Methods.get_ColSet(numOf_Circles);
+
+		///////////////////////////////////
+		//
+		// build: ppm data
+		//
+		///////////////////////////////////
+		int dist;
+		
+		int color_Num;
+		
+		int dist_x, dist_y;
+		
+		int dist_Quotient;
+		
+		for (int i = 0; i < y; i++) {
+			
+			for (int j = 0; j < x; j++) {
+				
+				///////////////////////////////////
+				//
+				// judge: distance
+				//
+				///////////////////////////////////
+				dist_x = Math.abs(center_X - j);
+				dist_y = Math.abs(center_Y - i);
+				
+				dist = (int) Math.sqrt(
+								Math.pow((double) dist_x, 2) 
+								+ Math.pow((double) dist_y, 2));
+				
+				dist_Quotient = dist / unit;
+				
+				switch (dist_Quotient) {
+				case 0: color_Num = dist_Quotient; break;
+				case 1: color_Num = dist_Quotient; break;
+				case 2: color_Num = dist_Quotient; break;
+				case 3: color_Num = dist_Quotient; break;
+				case 4: color_Num = dist_Quotient; break;
+//				case 5: color_Num = dist_Quotient + 1; break;
+				case 5: color_Num = dist_Quotient; break;
+//				case 6: color_Num = dist_Quotient - 1; break;
+
+				default: color_Num = 6; break;
+//				default: color_Num = 5; break;
+				
+				}
+				
+//				// judge
+////				dist < (unit * 3) ? color_Num = 0 : color_Num = 1;
+//				if (dist < (unit * 3)) {
+//					
+//					color_Num = 0;
+//					
+//				} else {//if (dist < (unit * 3))
+//					
+//					color_Num = 1;
+//					
+//				}//if (dist < (unit * 3))
+				
+				
+				for (int k = 0; k < 3; k++) {
+					
+					data[i][j][k] = col_Set[color_Num][k];
+//					data[i][j][k] = col_Set[0][k];
+					
+				}
+				
+			}
+			
+		}
+		
+		///////////////////////////////////
+		//
+		// report
+		//
+		///////////////////////////////////
+		String msg;
+		msg = String.format(Locale.JAPAN, 
+				"[%s : %d] x = %d, y = %d / center_X = %d, center_Y = %d", 
+				Thread
+				.currentThread().getStackTrace()[1].getFileName(), Thread
+				.currentThread().getStackTrace()[1].getLineNumber(), 
+				x, y, center_X, center_Y
+		);
+
+		System.out.println(msg);
+
+		// radiuses
+		for (int i = 0; i < numOf_Circles; i++) {
+			
+//			String msg;
+			msg = String.format(Locale.JAPAN, "[%s : %d] rs[%d] => %d", Thread
+					.currentThread().getStackTrace()[1].getFileName(), Thread
+					.currentThread().getStackTrace()[1].getLineNumber(), i, rs[i]);
+
+			System.out.println(msg);
+			;
+			
+		}
+		
+		return data;
+		
+	}//build_PPM_Circle(int x, int y)
+
+	private static int[][] 
+	get_ColSet(int numOf_Circles) {
+		// TODO Auto-generated method stub
+		int[][] col_Set = new int [numOf_Circles + 1][3];
+//		int[][] col_Set = new int [numOf_Circles][3];
+
+		// light blue: 33FFFF
+		col_Set[0][0] = 0x33;
+		col_Set[0][1] = 0xFF;
+		col_Set[0][2] = 0xFF;
+		
+		// pink: FF66CC
+		col_Set[1][0] = 0xff;
+		col_Set[1][1] = 0x66;
+		col_Set[1][2] = 0xcc;
+		
+		// yellow: ffff33
+		col_Set[2][0] = 0xff;
+		col_Set[2][1] = 0xff;
+		col_Set[2][2] = 0x33;
+		
+		// blue: 0000ff
+		col_Set[3][0] = 0x00;
+		col_Set[3][1] = 0x00;
+		col_Set[3][2] = 0xff;
+		
+		// green: 
+		col_Set[4][0] = 0x00;
+		col_Set[4][1] = 0xff;
+		col_Set[4][2] = 0x00;
+		
+		// red: 
+		col_Set[5][0] = 0xff;
+		col_Set[5][1] = 0x00;
+		col_Set[5][2] = 0x00;
+
+		// blank: 
+		col_Set[5][0] = 0x00;
+		col_Set[5][1] = 0x00;
+		col_Set[5][2] = 0x00;
+		
+		// return
+		return col_Set;
+		
+	}
+
 }//public class Methods
 
